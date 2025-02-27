@@ -1,0 +1,897 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body {  
+    background: #FFDAB9;  
+    font-family: 'Poppins', sans-serif;  
+    min-height: 100vh;  
+    padding: 20px;  
+}  
+
+.container {  
+display: flex;  
+gap: 20px;  
+position: relative;  
+}  
+
+
+/* Ubah style untuk sidebar */  
+.sidebar {  
+width: 80px;  
+height: 695px;  
+background: #5B6079;  
+position: fixed;  
+left: 25px;  
+top: 120px;  
+display: flex;  
+flex-direction: column;  
+align-items: center;  
+padding-top: 150px; /* Ruang untuk logo */  
+border-radius: 15px;  
+gap: 40px; /* Jarak antar icon */  
+}   
+
+/* Style baru untuk logo */  
+.logo {  
+position: fixed;  
+left: 10px;  
+top: 20px;  
+color: #000;  
+-webkit-text-stroke: 4px #000;  
+text-stroke: 4px #000;  
+-webkit-text-stroke-color: #000;  
+font-family: "Sankofa Display";  
+font-size: 60px;  
+font-weight: 400;  
+z-index: 1000;  
+}  
+
+/* Update nav-item style */  
+.nav-item {  
+width: 44px;  
+height: 44px;  
+display: flex;  
+align-items: center;  
+justify-content: center;  
+cursor: pointer;  
+color: white;  
+font-size: 20px;  
+transition: all 0.3s ease;  
+margin-bottom: 10px;  
+}  
+.nav-item i {  
+color: white;  
+font-size: 24px;  
+}  
+
+.nav-item.active {  
+background: rgba(255, 255, 255, 0.9);  
+}  
+
+.nav-item.active i {  
+color: #5B6079;  
+}  
+
+/* Garis pemisah */  
+.nav-divider {  
+width: 40px;  
+height: 1px;  
+background: rgba(255, 255, 255, 0.2);  
+margin: 10px 0;  
+}  
+
+
+.nav-item.active {  
+background: rgba(245, 245, 245, 0.55);  
+border-radius: 11px;  
+color: #5B6079;  
+}  
+
+/* Tambahkan garis pemisah */  
+.nav-divider {  
+width: 40px;  
+height: 1px;  
+background-color: rgba(255, 255, 255, 0.2);  
+margin: 10px 0;  
+}   
+
+/* Update main-content positioning */  
+.main-content {  
+margin-left: 150px;  
+flex: 1;
+/* padding-top: 20px;   */
+}  
+
+
+.header {  
+width: 100%; /* Mengurangi lebar dengan margin sidebar */  
+height: 89px;  
+background: #8E7892;  
+border-radius: 14px;  
+padding: 0 30px;  
+display: flex;  
+align-items: center;  
+margin-bottom: 20px;  
+} 
+
+.header h1 {  
+    color: #FFF;  
+    font-size: 20px;  
+    font-weight: 800;  
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 20px;     */
+}  
+
+.cards-container {  
+display: flex;  
+gap: 20px;  
+justify-content: space-evenly;  
+margin: 20px 20px 20px 40px; /* top right bottom left */  
+/* Atau bisa juga menggunakan transform */  
+/* transform: translateX(20px); */  
+}  
+
+.mood-card {  
+    width: 465px;  
+    height: 338px;  
+    background: #E6B3AB;  
+    border-radius: 16px;  
+    padding: 30px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: space-between;  
+}  
+
+.article-card {  
+    width: 572px;  
+    height: 338px;  
+    background: #2F4858;  
+    border-radius: 16px;  
+    padding: 30px;  
+    color: white;  
+}  
+
+.card-title {  
+    color: #FFF;  
+    font-size: 24px;  
+    font-weight: 800;  
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;  
+}  
+
+.mood-emoji {  
+    width: 120px;  
+    height: 120px;  
+    background: #FFD93D;  
+    border-radius: 50%;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    font-size: 60px;  
+}  
+
+.mood-label {  
+    color: white;  
+    font-size: 24px;  
+    font-weight: 600;  
+    margin-top: 20px;  
+}  
+
+.timeline {  
+    margin-top: 30px;  
+}  
+
+.timeline-item {  
+position: relative;  
+padding-left: 30px;  
+margin-bottom: 30px;  
+display: flex;  
+flex-direction: column;  
+}  
+
+.timeline-item::before {  
+content: '';  
+position: absolute;  
+left: 0;  
+width: 12px;  
+height: 12px;  
+background: white;  
+border-radius: 50%;  
+}  
+
+.timeline-item::after {  
+content: '';  
+position: absolute;  
+left: 5px;  
+width: 2px;  
+height: calc(100% + 30px);  
+background: white;  
+}  
+
+.timeline-date {  
+font-size: 16px;  
+font-weight: 600;  
+margin-bottom: 8px;  
+line-height: 1;  
+}  
+
+.timeline-text {  
+font-size: 14px;  
+opacity: 0.8;  
+line-height: 1.4;  
+}
+.timeline-text {  
+    font-size: 14px;  
+    opacity: 0.8;  
+}  
+
+.notes-section {  
+    width: 100%;  
+    background: #8E7892;  
+    border-radius: 14px;  
+    padding: 20px 30px;  
+    margin-top: 20px;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+}  
+
+.add-note-btn {  
+    background: #A7AF7A;  
+    padding: 12px 24px;  
+    border-radius: 10px;  
+    color: white;  
+    cursor: pointer;  
+    display: flex;  
+    align-items: center;  
+    gap: 8px;  
+    font-weight: 500;  
+    font-size: 20px;
+}  
+
+i.fa-plus{
+    font-size: 25px;
+}
+
+.note-card {  
+width: 80%;  
+background: #BD5720;  
+border-radius: 16px;  
+padding: 30px;  
+margin: 20px auto;  
+color: white;  
+position: relative;  
+min-height: 160px; /* Tambahkan minimum height */  
+}  
+
+.hasil-note {  
+position: absolute;  
+right: 30px;      /* Jarak dari sisi kanan */  
+top: 50%;         /* Posisi vertical di tengah */  
+transform: translateY(-50%); /* Menyesuaikan ke tengah sempurna */  
+}  
+
+.hasil-note img {  
+width: 160px;  
+height: 160px;  
+object-fit: contain;  
+position: relative;
+left: -30px;
+}  
+
+/* Konten text */  
+.note-content {  
+width: calc(100% - 200px); /* Memberikan ruang untuk gambar */  
+}  
+
+.note-card h3,  
+.note-card p,  
+.note-card .date {  
+width: 60%;  
+}  
+
+/* Style untuk tanggal */  
+.note-card .date {  
+font-size: 14px;  
+margin-top: 10px;  
+}  
+
+.delete-btn {  
+position: absolute;  
+top: 20px;  
+right: 20px;  
+color: white;  
+cursor: pointer;  
+}   
+
+.view-all {  
+    color: white;  
+    text-decoration: none;  
+    font-size: 14px;  
+    margin-left: auto;  
+}  
+
+.Navigation-moju {  
+display: none;  
+}  
+
+.logo-mobile {  
+display: none;  
+text-align: center;  
+font-family: "Sankofa Display";  
+}  
+
+.artikel-title {  
+display: flex;  
+justify-content: space-between;  
+align-items: center;  
+margin-bottom: 20px;  
+width: 100%;  
+}  
+
+.artikel-title .card-title {  
+margin: 0; /* Menghilangkan margin bawaan */  
+}  
+
+.artikel-title .view-all {  
+color: white;  
+text-decoration: none;  
+font-size: 14px;  
+}  
+
+
+
+
+@media screen and (max-width: 1400px) {  
+.cards-container {  
+gap: 15px;  
+}  
+
+.mood-card {  
+width: 400px;  
+}  
+
+.article-card {  
+width: 500px;  
+}  
+
+.timeline-text {  
+font-size: 13px;  
+}  
+
+.card-title {  
+font-size: 22px;  
+}  
+
+.mood-emoji {  
+width: 110px;  
+height: 110px;  
+}  
+
+.mood-label {  
+font-size: 22px;  
+}  
+
+
+
+}  
+
+@media screen and (max-width: 1200px) {  
+.mood-card {  
+width: 350px;  
+height: 320px;  
+}  
+
+.article-card {  
+width: 450px;  
+height: 320px;  
+}  
+
+.note-card {  
+width: 90%;  
+}  
+
+.timeline-item {  
+margin-bottom: 25px;  
+}  
+
+.timeline-date {  
+font-size: 15px;  
+}  
+
+.timeline-text {  
+font-size: 12px;  
+}  
+
+.mood-emoji {  
+width: 100px;  
+height: 100px;  
+}  
+
+.mood-label {  
+font-size: 20px;  
+}  
+
+.add-note-btn {  
+padding: 10px 20px;  
+font-size: 18px;  
+}  
+}  
+
+@media screen and (max-width: 1024px) {  
+.main-content {  
+margin-left: 120px;  
+}  
+
+.mood-card {  
+width: 300px;  
+height: 300px;  
+}  
+
+.article-card {  
+width: 380px;  
+height: 300px;  
+}  
+
+.hasil-note img {  
+
+width: 120px;  
+height: 120px;  
+}  
+
+.timeline {  
+margin-top: 25px;  
+}  
+
+.timeline-item {  
+margin-bottom: 20px;  
+padding-left: 25px;  
+}  
+
+.timeline-date {  
+font-size: 14px;  
+}  
+
+.card-title {  
+font-size: 20px;  
+margin-bottom: 15px;  
+}  
+
+.notes-section {  
+padding: 15px 25px;  
+}  
+
+.add-note-btn {  
+padding: 8px 16px;  
+font-size: 16px;  
+}  
+
+i.fa-plus {  
+font-size: 20px;  
+}  
+
+.header h1 {  
+font-size: 22px;  
+}  
+}  
+
+
+/* Layar HP dan TABLET */
+@media screen and (max-width: 1000px) {
+
+
+.main-content .logo-mobile{
+font-size: 20px;
+font-family: "Sankofa Display";  
+font-size: 60px;  
+margin-bottom: 20px;
+}
+/* Timeline styling */  
+.timeline {  
+margin-top: 20px;  
+padding: 0 10px;  
+position: relative;
+
+}  
+
+.timeline-item {  
+position: relative;  
+padding-left: 20px;  
+margin-bottom: 15px;  
+}  
+
+.timeline-item::before {  
+content: '';  
+position: absolute;  
+left: 0;  
+width: 8px;  
+height: 8px;  
+background: white;  
+border-radius: 50%;  
+}  
+
+.timeline-item::after {  
+content: '';  
+position: absolute;  
+left: 3.5px;  
+width: 1px;  
+/* height: calc(100%);   */
+background: white;  
+}  
+
+.timeline-date {  
+font-size: 12px;  
+font-weight: 600;  
+margin-bottom: 5px;  
+line-height: 1.2;  
+}  
+
+.timeline-text {  
+font-size: 8px;  
+opacity: 0.8;  
+line-height: 1.4;  
+}  
+
+
+/* Logo */  
+.logo-mobile {  
+display: block;  
+color: rgb(0, 0, 0); /* Warna teks utama */  
+-webkit-text-stroke: 1px #000; /* Untuk browser berbasis webkit */  
+text-stroke: 1px #000; /* Standar CSS */  
+font-family: "Sankofa Display";  
+font-size: 40px;  
+font-style: normal;  
+font-weight: 400;  
+line-height: normal;  
+text-align: center;  
+/* Tambahan untuk memastikan stroke terlihat di berbagai browser */  
+text-shadow:   
+-1px -1px 0 #000,  
+1px -1px 0 #000,  
+-1px 1px 0 #000,  
+1px 1px 0 #000;  
+}  
+
+/* Main content */  
+.main-content {  
+margin-left: 0;  
+padding: 0;  
+}  
+
+/* Header */  
+.header {  
+display: flex;  
+align-items: center;     /* Vertical center */  
+justify-content: center; /* Horizontal center */  
+background: #8E7892;  
+padding: 15px 20px;     /* Tambahkan padding untuk spacing */  
+border-radius: 14px;  
+width: 50%;  
+min-height: 89px;       /* Optional: jika ingin tinggi tetap */  
+}  
+
+.header h1 {  
+font-size: 18px;  
+color: white;  
+margin: 0;             /* Menghilangkan margin bawaan */  
+text-align: center;    /* Center text jika multiline */  
+}   
+
+/* Cards container */  
+.cards-container {  
+/* flex-direction: column;   */
+gap: 15px;  
+margin: 15px 0;  
+z-index: -9999;
+margin-bottom: -110px;
+}  
+
+.mood-card {  
+background: #E6B3AB;  
+border-radius: 16px;  
+padding: 20px;  
+height: 200px; 
+text-align: center;  
+}  
+
+.mood-emoji {  
+width: 80px;  
+height: 80px;  
+margin: 15px auto;  
+}  
+
+.article-card {  
+background: #2F4858;  
+border-radius: 16px;  
+padding: 20px;  
+height: 360px;
+width: 100%;  
+ 
+position: relative;
+top: -110px;
+overflow: hidden;
+/* min-height: 250px;   */
+}  
+
+.timeline-item {  
+margin-bottom: 20px;  
+}  
+
+/* Notes section */  
+.notes-section {  
+display: flex;  
+justify-content: space-between;  
+align-items: center;  
+background: #8E7892;  
+border-radius: 14px;  
+padding: 15px;  
+margin: 15px 0;  
+}  
+
+.add-note-btn {  
+background: #A7AF7A;  
+border-radius: 8px;  
+padding: 8px 15px;  
+display: flex;  
+align-items: center;  
+gap: 5px;  
+}  
+
+/* Note cards */  
+.note-card {  
+
+border-radius: 16px;  
+padding: 20px;  
+margin: 15px 20px;  
+position: relative;  
+}  
+
+.hasil-note {  
+position: absolute;  
+right: 20px;  
+top: 50px;
+margin-right: 30px; 
+margin-top: -10px ;
+
+/* Jarak dari kanan */  
+bottom: 20px;     /* Jarak dari bawah */  
+transform: none;  /* Menghapus transform karena menggunakan bottom positioning */  
+}  
+
+.hasil-note img {  
+width: 80px;  
+height: 80px; 
+
+} 
+
+
+
+.sidebar {  
+display: none;  
+}  
+
+/* Reset margin dan padding main content */  
+.main-content {  
+margin-left: 0;  
+padding: 0;  
+width: 100%;  
+}  
+
+
+
+/* Cards container */  
+
+
+.mood-card, .article-card {  
+width: 100%;  
+
+min-height: 250px;  
+}  
+
+/* Notes section */  
+.notes-section {  
+/* flex-direction: column;   */
+padding: 15px;  
+}  
+
+.card-title {  
+font-size: 14px; 
+
+
+}  
+
+.add-note-btn {  
+width: 100%;  
+justify-content: center;  
+}  
+
+.note-card {  
+padding: 15px;  
+min-height: 120px;  
+}  
+
+.note-card h3 {  
+font-size: 18px;  
+margin-bottom: 8px;  
+}  
+
+.note-card p {  
+font-size: 8px;  
+margin-bottom: 10px;  
+}  
+
+.note-card .date {  
+font-size: 12px;  
+}  
+
+.hasil-note {  
+width: 40px;  
+height: 40px;  
+bottom: 15px;  
+right: 15px;  
+}  
+
+.mood-emoji img {
+width: 125px;
+height: 125px;
+}
+.artikel-title {  
+display: flex;  
+justify-content: space-between;  
+align-items: center;  
+margin-bottom: 8px;  
+width: 100%;  
+}  
+
+.artikel-title .card-title {  
+margin: 0; /* Menghilangkan margin bawaan */  
+margin-right: 10px;
+font-size: 12px;
+}  
+
+.artikel-title .view-all {  
+color: white;  
+text-decoration: none;  
+font-size: 10px;  
+}  
+
+.Navigation-moju{
+position: fixed;
+bottom: 0px;
+left: 0px;
+right: 0px;
+z-index: 98;
+/* width: 400px;
+height: 60px; */
+min-height: 61px;
+background: #5B6079;  
+display: flex;
+justify-content: center;
+align-items: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+
+}
+
+
+.Navigation-moju ul{
+display: flex;
+/* width: 350px; */
+/* border: 1px solid black; */
+justify-content: space-between;
+width:90%;
+
+
+}
+
+.Navigation-moju ul li {
+list-style:none;
+position: relative;
+width: 70px;
+height:60px ;
+z-index: 2;
+
+/* background-color: aqua; */
+/* margin: 0 10px; */
+
+
+
+}
+
+
+
+
+.Navigation-moju ul li a{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+text-align: center;
+}
+
+.Navigation-moju ul li a .icon-moju{
+position: relative;
+display: block;
+line-height: 65px;
+font-size: 1.5em;
+transition: 0.5s ;
+color: #fff; 
+
+}
+
+.Navigation-moju ul li.active a .icon-moju{
+
+transform:translateY(-32px) ;
+/* color: #2196f3; */
+
+}
+
+.Navigation-moju ul li a .text{
+position: absolute;
+background: #D2809C;
+color: #ffffff;
+padding: 2px 7px;
+border-radius: 12px;
+font-weight: 400;
+font-size: 0.75em;
+letter-spacing: 0.05em;
+transition: 0.5s;
+opacity: 0;
+transform: translateY(15px);
+top:30px;
+}
+
+.Navigation-moju ul li.active a .text{
+transform: translateY(-4px);
+opacity: 1;
+
+
+}
+
+.indikator-moju{
+position: absolute;
+top: -35px;
+width: 70px;
+height: 70px;
+background: #5B6079;  
+border-radius: 50%;
+z-index: 1;
+transition: 0.5s;
+}
+
+.indikator-moju::before{
+content: ' ';
+position: absolute;
+top: 5px;
+left: -27px;
+width: 30px;
+height: 30px;
+background: transparent;
+border-radius: 50%;
+box-shadow: 15px 18px #5B6079;
+}
+
+.indikator-moju::after{
+content: '';
+position: absolute;
+top: 5px;
+right: -28px;
+width: 30px;
+height: 30px;
+background: transparent;
+border-radius: 50%;
+box-shadow: -15px 18px #5B6079;
+}
+
+
+}

@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/http-client": "^7.0",
+        "gemini-api-php/client": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Kreatif</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const backgrounds = [
+            'https://source.unsplash.com/1600x900/?nature',
+            'https://source.unsplash.com/1600x900/?city',
+            'https://source.unsplash.com/1600x900/?technology',
+            'https://source.unsplash.com/1600x900/?abstract'
+        ];
+        let currentBg = 0;
+
+        function changeBackground() {
+            document.querySelector('.container').style.backgroundImage = `url('${backgrounds[currentBg]}')`;
+            currentBg = (currentBg + 1) % backgrounds.length;
+        }
+
+        changeBackground(); // Set initial background
+        setInterval(changeBackground, 5000); // Change background every 5 seconds
+    </script>
+</body>
+</html>

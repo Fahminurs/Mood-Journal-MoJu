@@ -1,0 +1,610 @@
+/* ========== START: Font Import ========== */  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');  
+/* ========== END: Font Import ========== */  
+
+/* ========== START: Base Typography ========== */  
+html {  
+    font-size: 16px; /* Base font size */  
+}  
+
+@media (max-width: 576px) {  
+    html {  
+        font-size: 14px; /* Lebih kecil untuk smartphone */  
+    }  
+}  
+/* ========== END: Base Typography ========== */  
+
+/* ========== START: DataTables Pagination Base Styling ========== */  
+.dataTables_wrapper .pagination {  
+    margin: 0;  
+    display: flex;  
+    align-items: center;  
+    scale: 0.8; /* Mengecilkan ukuran keseluruhan */  
+    transform-origin: right center;  
+}  
+
+.dataTables_wrapper .pagination > li.page-item {  
+    margin: 0 2px;  
+}  
+
+.dataTables_wrapper .pagination > li > a.page-link {  
+    padding: 0.20rem 0.4rem;  
+    font-size: 0.7rem;  
+    line-height: 1.2;  
+    color: #5e72e4;  
+    border-radius: 0.2rem;  
+}  
+
+.dataTables_wrapper .pagination > li.active > a.page-link {  
+    background-color: #5e72e4;  
+    color: #fff;  
+    border-color: #5e72e4;  
+}  
+
+.dataTables_paginate .page-link {  
+    padding: 0.20rem 0.4rem;  
+    font-size: 0.7rem;  
+    line-height: 1.2;  
+}  
+
+.dataTables_paginate .page-item.active .page-link {  
+    background-color: #5e72e4;  
+    color: white;  
+}  
+/* ========== END: DataTables Pagination Base Styling ========== */  
+
+/* ========== START: Pagination Focus & Hover States ========== */  
+.dataTables_wrapper .pagination > li > .page-link:focus {  
+    outline: none; /* Hapus outline default */  
+    box-shadow: none; /* Efek shadow fokus */  
+}  
+/* ========== END: Pagination Focus & Hover States ========== */  
+
+/* ========== START: Responsive DataTable Control Styling ========== */  
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,  
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {  
+    content: "+";  
+    font-family: 'Poppins', sans-serif;  
+    font-size: 12px;  
+    font-weight: 600;  
+    
+    display: block;  
+    position: absolute;  
+    top: 75%;  
+    left: 5px;   
+    transform: translateY(-50%);  
+    
+    height: 1.5em;  
+    width: 1.5em;  
+    line-height: 1.5em;  
+    
+    background-color: #0d6efd;  
+    color: white;  
+    
+    border-radius: 5px;  
+    
+    text-align: center;  
+    text-indent: 0 !important;  
+    
+    box-shadow:   
+        0 4px 6px rgba(0, 0, 0, 0.1),   
+        0 1px 3px rgba(0, 0, 0, 0.08);  
+    
+    transition:   
+        background-color 0.3s ease,  
+        transform 0.2s ease;  
+}  
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:hover:before,  
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:hover:before {  
+    background-color: #0b5ed7;  
+    transform: translateY(-50%) scale(1.1);  
+}  
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.shown > td.dtr-control:before,  
+table.dataTable.dtr-inline.collapsed > tbody > tr.shown > th.dtr-control:before {  
+    content: "−";  
+    background-color: rgb(126.2, 142.2, 233.4);  
+}  
+/* ========== END: Responsive DataTable Control Styling ========== */  
+
+/* ========== START: Modal Styling ========== */  
+.modal-content-moju {  
+    font-family: 'Poppins', sans-serif;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+}  
+
+.header-moju {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 600;  
+    line-height: 1.5;  
+    font-size: 1rem;  
+    color: #333;  
+}  
+
+.modal-header-moju {  
+    display: flex;  
+    align-items: center;  
+    padding: 1rem;  
+    border-bottom: 1px solid #e9ecef;  
+    font-family: 'Poppins', sans-serif;  
+}  
+
+.modal-body-moju {  
+    font-family: 'Poppins', sans-serif;  
+    line-height: 1.6;  
+    padding: 1rem;  
+}  
+
+.table-moju {  
+    width: 100%;  
+    margin-bottom: 0;  
+    font-family: 'Poppins', sans-serif;  
+    line-height: 1.5;  
+}  
+
+.table-moju th,  
+.table-moju td {  
+    padding: 0.75rem;  
+    vertical-align: middle;  
+    border: 1px solid #dee2e6;  
+    font-family: 'Poppins', sans-serif;  
+}  
+
+.table-moju th {  
+    background-color: #f8f9fa;  
+    font-weight: 600;  
+}  
+
+.detail-moju {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    font-family: 'Poppins', sans-serif;  
+    padding: 0.5rem 0;  
+}  
+
+.column-moju {  
+    font-weight: 600;  
+    margin-right: 10px;  
+    color: #495057;  
+}  
+
+.value-moju {  
+    color: #212529;  
+    flex-grow: 1;  
+    text-align: right;  
+}  
+/* ========== END: Modal Styling ========== */  
+
+/* ========== START: Pagination Layout ========== */  
+.dataTables_wrapper .col-sm-12.col-md-7 {  
+    display: flex;  
+    justify-content: flex-end;  
+    align-items: center;  
+}  
+
+.dataTables_paginate {  
+    margin-left: auto;  
+    display: flex;  
+    justify-content: flex-end;  
+}  
+
+.dataTables_paginate .pagination {  
+    margin: 0;  
+    scale: 1;  
+    transform-origin: right center;  
+}  
+/* ========== END: Pagination Layout ========== */  
+
+/* ========== START: Utility Classes ========== */  
+.text-truncate-custom {  
+    max-width: 150px;  
+    white-space: nowrap;  
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+}  
+
+.dataTables_info {  
+    display: none !important;  
+    font-size: 0.8rem;  
+}  
+/* ========== END: Utility Classes ========== */  
+
+/* ========== START: Responsive Input Styling ========== */  
+.dataTables_length select,  
+.dataTables_filter input {  
+    font-size: 0.8rem;  
+    padding: 0.25rem 2.5rem;  
+    font-size: 14px;
+}  
+/* ========== END: Responsive Input Styling ========== */  
+
+/* ========== START: Table Header Styling with Red Focus and Hover ========== */  
+#userTable th {  
+text-align: center !important;  
+vertical-align: middle !important;  
+white-space: nowrap;  
+transition:   
+background-color 0.3s ease,  
+color 0.3s ease,  
+box-shadow 0.3s ease;  
+position: relative;  
+cursor: pointer;  
+background-color: #5e72e4;
+}  
+
+/* Base Header Styling */  
+#userTable thead {  
+background-color: #f8f9fa;  
+border-bottom: 2px solid #dee2e6;  
+}  
+
+/* Header Hover State */  
+#userTable th.sorting:hover {  
+background-color: rgb(126.2, 142.2, 233.4) !important; /* Warna merah */  
+color: white !important;  
+box-shadow:   
+0 4px 6px rgba(0,0,0,0.1),  
+0 1px 3px rgba(0,0,0,0.06);  
+}  
+
+/* Header Focus State */  
+#userTable th.sorting:focus,  
+#userTable th.sorting:focus-visible {  
+outline: none;  
+background-color: rgb(126.2, 142.2, 233.4) !important; /* Warna merah */  
+color: white !important;  
+box-shadow:   
+0 0 0 3px rgba(53, 220, 128, 0.5), /* Efek shadow fokus */  
+0 4px 6px rgba(0,0,0,0.1);  
+}  
+
+/* Active Sorting States */  
+#userTable th.sorting_asc,  
+#userTable th.sorting_desc {  
+background-color: rgb(126.2, 142.2, 233.4) !important;  
+color: white !important;  
+}  
+
+/* Styling Teks Header */  
+#userTable thead tr th {  
+text-align: center !important;  
+vertical-align: middle !important;  
+padding: 0.75rem !important;  
+color: #000000;  
+font-weight: 600;  
+text-transform: uppercase;  
+letter-spacing: 0.5px;  
+}  
+
+/* Styling Ikon Sorting */  
+#userTable th.sorting::after,  
+#userTable th.sorting_asc::after,  
+#userTable th.sorting_desc::after {  
+position: absolute;  
+right: 10px;  
+top: 50%;  
+transform: translateY(-50%);  
+opacity: 0.7;  
+color: white; /* Warna putih saat header merah */  
+}  
+
+/* Variasi Warna untuk Berbagai Status */  
+#userTable th.sorting_asc::after {  
+color: black;
+}  
+
+#userTable th.sorting_desc::after {  
+color: black;
+}  
+
+/* Efek Transisi Halus */  
+#userTable th {  
+transition:   
+background-color 0.3s ease,  
+color 0.3s ease,  
+box-shadow 0.3s ease;  
+}  
+/* ============ Rounded ===========*/
+/* Rounded pada header tabel */  
+#userTable thead tr:first-child th:first-child {  
+border-top-left-radius: 12px;  
+
+}  
+
+#userTable thead tr:first-child th:last-child {  
+border-top-right-radius: 12px;  
+}  
+
+/* Rounded pada baris terakhir */  
+#userTable tbody tr:last-child td:first-child {  
+border-bottom-left-radius: 12px;  
+}  
+
+#userTable tbody tr:last-child td:last-child {  
+border-bottom-right-radius: 12px;  
+} 
+
+table {
+font-size: 12px;
+font-family: "Poppins", sans-serif;
+
+
+}
+table th {  
+font-size: 14px;  
+text-transform: none !important; /* Hapus uppercase */  
+font-weight: 600; /* Tambahkan ketebalan font */  
+letter-spacing: normal; /* Kembalikan spasi huruf normal */  
+color: #495057; /* Warna teks */  
+}  
+
+/* Search and select input */
+div.dataTables_wrapper div.dataTables_filter input {
+
+border: 2px solid black;
+border-radius: 20px;
+padding: 3px 32px !important;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 12px;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    padding: 3px 30px !important;
+border: 2px solid black;
+border-radius: 20px;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 12px;
+}
+
+/* ================== usertable Edukasi  ================ */
+/* ========== START: Table Header Styling with Red Focus and Hover ========== */  
+#userTable-edukasi th {  
+    text-align: center !important;  
+    vertical-align: middle !important;  
+    white-space: nowrap;  
+    transition:   
+    background-color 0.3s ease,  
+    color 0.3s ease,  
+    box-shadow 0.3s ease;  
+    position: relative;  
+    cursor: pointer;  
+    background-color: #be5ee4;
+    }  
+    
+    /* Base Header Styling */  
+    #userTable-edukasi thead {  
+    background-color: #f8f9fa;  
+    border-bottom: 2px solid #dee2e6;  
+    }  
+    
+    /* Header Hover State */  
+    #userTable-edukasi th.sorting:hover {  
+    background-color: rgb(199, 126, 233)  !important; /* Warna merah */  
+    color: white !important;  
+    box-shadow:   
+    0 4px 6px rgba(0,0,0,0.1),  
+    0 1px 3px rgba(0,0,0,0.06);  
+    }  
+    
+    /* Header Focus State */  
+    #userTable-edukasi th.sorting:focus,  
+    #userTable-edukasi th.sorting:focus-visible {  
+    outline: none;  
+    background-color: rgb(199, 126, 233)   !important; /* Warna merah */  
+    color: white !important;  
+    box-shadow:   
+    0 0 0 3px rgba(53, 220, 128, 0.5), /* Efek shadow fokus */  
+    0 4px 6px rgba(0,0,0,0.1);  
+    }  
+    
+    /* Active Sorting States */  
+    #userTable-edukasi th.sorting_asc,  
+    #userTable-edukasi th.sorting_desc {  
+    background-color: rgb(199, 126, 233)   !important;  
+    color: white !important;  
+    }  
+    
+    /* Styling Teks Header */  
+    #userTable-edukasi thead tr th {  
+    text-align: center !important;  
+    vertical-align: middle !important;  
+    padding: 0.75rem !important;  
+    color: #000000;  
+    font-weight: 600;  
+    text-transform: uppercase;  
+    letter-spacing: 0.5px;  
+    }  
+    
+    /* Styling Ikon Sorting */  
+    #userTable-edukasi th.sorting::after,  
+    #userTable-edukasi th.sorting_asc::after,  
+    #userTable-edukasi th.sorting_desc::after {  
+    position: absolute;  
+    right: 10px;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    opacity: 0.7;  
+    color: white; /* Warna putih saat header merah */  
+    }  
+    
+    /* Variasi Warna untuk Berbagai Status */  
+    #userTable-edukasi th.sorting_asc::after {  
+    color: black;
+    }  
+    
+    #userTable-edukasi th.sorting_desc::after {  
+    color: black;
+    }  
+    
+    /* Efek Transisi Halus */  
+    #userTable-edukasi th {  
+    transition:   
+    background-color 0.3s ease,  
+    color 0.3s ease,  
+    box-shadow 0.3s ease;  
+    }  
+    #userTable th:last-child,
+    #userTable td:last-child {
+      text-align: center;
+    }
+    #userTable th:first-child,
+    #userTable td:first-child {
+      text-align: center;
+    }
+    /* ============ Rounded ===========*/
+    /* Rounded pada header tabel */  
+    #userTable-edukasi thead tr:first-child th:first-child {  
+    border-top-left-radius: 12px;  
+    
+    }  
+    
+    #userTable-edukasi thead tr:first-child th:last-child {  
+    border-top-right-radius: 12px;  
+    }  
+    
+    /* Rounded pada baris terakhir */  
+    #userTable-edukasi tbody tr:last-child td:first-child {  
+    border-bottom-left-radius: 12px;  
+    }  
+    
+    #userTable-edukasi tbody tr:last-child td:last-child {  
+    border-bottom-right-radius: 12px;  
+    } 
+    
+        #userTable-edukasi th,   
+        #userTable-edukasi td {  
+            padding: 0.5rem !important;  
+        }  
+
+/* Biar ke tengah isinya sama kolomnya */
+#userTable-edukasi th:last-child,
+#userTable-edukasi td:last-child {
+  text-align: center;
+}
+#userTable-edukasi th:first-child,
+#userTable-edukasi td:first-child {
+  text-align: center;
+}
+
+/* ========== START: Mobile Responsive Media Queries ========== */  
+@media (max-width: 768px) {  
+    .mobile-moju {  
+        font-size: 0.9rem;  
+    }  
+
+    div.dataTables_wrapper div.dataTables_length,  
+    div.dataTables_wrapper div.dataTables_filter,  
+    div.dataTables_wrapper div.dataTables_info,  
+    div.dataTables_wrapper div.dataTables_paginate {  
+        text-align: center;  
+    }  
+
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {  
+        justify-content: right !important;  
+    }  
+}  
+
+@media (max-width: 576px) {  
+    .table-responsive {  
+        font-size: 0.8rem;  
+    }  
+    div.dataTables_wrapper div.dataTables_filter input {
+
+      
+   width: 20px !important;
+        }
+        table th {  
+            font-size: 12px;  
+ 
+            }  
+
+    .btn {  
+        padding: 0.25rem 0.5rem;  
+        font-size: 0.75rem;  
+    }  
+
+    .modal-dialog {  
+        margin: 1.75rem 0.5rem;  
+        max-width: calc(100% - 1rem);  
+    }  
+
+    #userTable th,   
+    #userTable td {  
+        padding: 0.5rem !important;  
+    }  
+
+    .card-header {  
+        flex-direction: column;  
+        align-items: flex-start !important;  
+    }  
+
+
+
+    .dataTables_wrapper .row > div {  
+        margin-bottom: 5px;  
+    }  
+
+    .dataTables_paginate .pagination {  
+        scale: 0.7;  
+    }  
+    div.dataTables_wrapper div.dataTables_length select {
+
+    padding: 3px 15px;
+
+    }
+    
+
+
+}  
+
+@media (max-width: 992px) {  
+    .dataTables_wrapper .row {  
+        display: flex;  
+        align-items: center;  
+        flex-wrap: nowrap;  
+        flex-direction: row;  
+        justify-content: space-between;  
+    }  
+
+    .dataTables_wrapper .row > div {  
+        display: flex;  
+        align-items: center;  
+        flex: 1;  
+        margin-bottom: 10px;  
+    }  
+
+    .dataTables_length,  
+    .dataTables_filter {  
+        width: 100%;  
+        display: flex;  
+        align-items: center;  
+    }  
+
+    .dataTables_length label,  
+    .dataTables_filter label {  
+        display: flex;  
+        align-items: center;  
+        width: 100%;  
+        margin: 0;  
+    }  
+
+    .dataTables_length select,  
+    .dataTables_filter input {  
+        margin-left: 5px;  
+        flex-grow: 1;  
+    }  
+
+    .dataTables_wrapper .col-sm-12.col-md-5,  
+    .dataTables_wrapper .col-sm-12.col-md-7 {  
+        flex: none;  
+        width: auto;  
+    }  
+}
+  
+/* ========== END: Mobile Responsive Media Queries ========== */  

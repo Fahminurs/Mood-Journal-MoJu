@@ -1,0 +1,4871 @@
+[2024-12-02 00:21:30] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:21:30] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user@gmail.com"
+    ],
+    "duration": "19.14ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:21:31] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:21:31] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "7.31ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:21:31] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:21:31] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2024-12-02 00:21:31",
+        1
+    ],
+    "duration": "15.53ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:21:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:21:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:21:58] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:30] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:30] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "19.64ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:31] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "23.71ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "14.45ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "14.71ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "2.14ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:24:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.15ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:24:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.25ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "23.07ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [FORUM] New post created
+Data: {
+    "user_id": 1,
+    "diskusi_id": "21"
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "19.15ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.76ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.35ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "25.17ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.61ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.53ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "25.52ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "16.27ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:24:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:24:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:40] [QUERY] Query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "10"
+    ],
+    "duration": "16.16ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:40] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "10"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:24:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:40] [QUERY] Update like/unlike
+Data: {
+    "sql": "UPDATE like_unlike \r\n                              SET `like` = CASE WHEN ? = 'like' THEN 1 ELSE 0 END,\r\n                                  `unlike` = CASE WHEN ? = 'unlike' THEN 1 ELSE 0 END\r\n                              WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        "unlike",
+        "unlike",
+        1,
+        "10"
+    ],
+    "duration": "18.7ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:40] [LIKE] User 1 unlike post 10
+--------------------
+[2024-12-02 00:24:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "10"
+    ],
+    "duration": "14.91ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "10"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:24:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:41] [QUERY] Update like/unlike
+Data: {
+    "sql": "UPDATE like_unlike \r\n                              SET `like` = CASE WHEN ? = 'like' THEN 1 ELSE 0 END,\r\n                                  `unlike` = CASE WHEN ? = 'unlike' THEN 1 ELSE 0 END\r\n                              WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        "like",
+        "like",
+        1,
+        "10"
+    ],
+    "duration": "58.68ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:24:41] [LIKE] User 1 like post 10
+--------------------
+[2024-12-02 00:24:49] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:24:49] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "21.75ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:25:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:25:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.56ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:26:54] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:26:54] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.94ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:26:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:26:59] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.27ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:27:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:27:14] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "1.94ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:28:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:28:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.75ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:28:11] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:28:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:28:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "14.01ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:28:29] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:28:39] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:28:46] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:28:46] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "1.64ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:28:49] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:28:49] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "1.72ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:30:24] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:24] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "3.5ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:30:54] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:54] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "26.22ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.46ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.69ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "22.25ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "14.03ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "2.09ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.12ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.24ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:30:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.48ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:30:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:30:58] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:58] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.2ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:30:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:30:59] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "17.88ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:32:00] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:00] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.21ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.69ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "2.08ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.55ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "2.87ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "3.32ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.81ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.64ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "1.53ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:04] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.72ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "2.43ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "24.93ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.51ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "13.38ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.88ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.39ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:32:07] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:32:07] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.72ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:32:07] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "22.32ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "14.93ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.56ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "2.79ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "23.94ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.08ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "12.09ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "15.14ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:25] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.79ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.83ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.74ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "2.38ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.36ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.75ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "16ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:33:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:33:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "16.61ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:33:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "21.97ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.36ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.45ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "3.23ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "2.59ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.75ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "3.2ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.7ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:16] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:16] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "14.14ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "2.56ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "15.67ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "4.84ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "25.06ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "13.98ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.62ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.24ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "26.04ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.81ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "18.95ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.59ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.35ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "25.6ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.69ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.53ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "1.78ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:20] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:20] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:20] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "22.16ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.83ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "19.23ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.91ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "2.61ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "25.33ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "16.24ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.62ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:21] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:21] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.7ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:21] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.79ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "2.79ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.25ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.92ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.5ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "23.31ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.81ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "26.98ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:23] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.8ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "17.09ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "16.57ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.18ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.58ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.35ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.04ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "1.58ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "22.81ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "2.18ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "2.19ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.31ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.23ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.34ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.42ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "1.6ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:34:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:34:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "1.39ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:34:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:35:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:35:14] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user@gmail.com"
+    ],
+    "duration": "2.53ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:35:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:35:14] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "24.89ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:35:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:35:14] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2024-12-02 00:35:14",
+        1
+    ],
+    "duration": "18.63ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:35:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:35:38] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:35:38] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user@gmail.com"
+    ],
+    "duration": "21.71ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:35:38] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:35:38] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "23.42ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:35:38] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:35:38] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2024-12-02 00:35:38",
+        1
+    ],
+    "duration": "74.5ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:36:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:23] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:23] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.97ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:25] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "18.8ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "25.5ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.88ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.23ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "2.14ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.86ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.29ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "3ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.76ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:27] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:27] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:27] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.46ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "18.8ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "2.33ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.82ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "23.43ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "4.52ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.02ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "21.79ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "1.96ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:30] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:30] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "20.64ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.37ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.37ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.72ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.62ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "22.32ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "14.59ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.26ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "13.25ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:32] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:32] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.2ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:32] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:33] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:33] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "25.61ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:33] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "2.39ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.93ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "2.07ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.8ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "24.75ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.09ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "11.66ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.27ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "24.43ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.56ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.47ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "18.73ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "2.72ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "2.63ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "2.27ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "21.39ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "1.91ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.62ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "20.44ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.31ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.49ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.35ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.41ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.46ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "2.6ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:36] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:36] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "3.14ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:36] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "1.47ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "1.63ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "1.88ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.55ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "1.82ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.62ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "1.47ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:37] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:37] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "2.68ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:37] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:40] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "23.62ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "duration": "2.96ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        21
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "duration": "2.19ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        20
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "duration": "13.1ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        19
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "duration": "1.37ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        11
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "duration": "14.28ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        10
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "duration": "1.29ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        9
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "duration": "1.31ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        8
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:37:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:37:41] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "duration": "1.38ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-02 00:37:41] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        7
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-02 00:38:08] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:08] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "3.19ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:13] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:13] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "admin@gmail.com"
+    ],
+    "duration": "14.88ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:13] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:13] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        3
+    ],
+    "duration": "19.28ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:13] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:13] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2024-12-02 00:38:13",
+        3
+    ],
+    "duration": "15.83ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'user'",
+    "params": [],
+    "duration": "27.51ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'user'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'edukasi'",
+    "params": [],
+    "duration": "67.38ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'edukasi'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'admin'",
+    "params": [],
+    "duration": "1.58ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'admin'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'artikel'",
+    "params": [],
+    "duration": "22.08ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'artikel'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(login_at) as hari,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        GROUP BY DAYNAME(login_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "duration": "15.42ms",
+    "affected_rows": 3
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(login_at) as hari,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        GROUP BY DAYNAME(login_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "rows_returned": 3
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(login_at) as bulan,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        GROUP BY MONTHNAME(login_at)  \n        ORDER BY MONTH(login_at)  \n    ",
+    "params": [],
+    "duration": "14.84ms",
+    "affected_rows": 2
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(login_at) as bulan,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        GROUP BY MONTHNAME(login_at)  \n        ORDER BY MONTH(login_at)  \n    ",
+    "params": [],
+    "rows_returned": 2
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(created_at) as hari,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        AND role = 'user'  \n        GROUP BY DAYNAME(created_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "duration": "15.43ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(created_at) as hari,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        AND role = 'user'  \n        GROUP BY DAYNAME(created_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:38:15] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:15] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(created_at) as bulan,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        AND role = 'user'  \n        GROUP BY MONTHNAME(created_at)  \n        ORDER BY MONTH(created_at)  \n    ",
+    "params": [],
+    "duration": "2.64ms",
+    "affected_rows": 2
+}
+--------------------
+[2024-12-02 00:38:15] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(created_at) as bulan,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        AND role = 'user'  \n        GROUP BY MONTHNAME(created_at)  \n        ORDER BY MONTH(created_at)  \n    ",
+    "params": [],
+    "rows_returned": 2
+}
+--------------------
+[2024-12-02 00:38:45] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:45] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:45] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:45] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:48] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:48] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:50] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:50] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:53] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:38:53] [QUERY] Fetch current user details
+Data: {
+    "sql": "SELECT * FROM user WHERE id_user = ?",
+    "params": [
+        3
+    ],
+    "duration": "22.6ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:38:53] [SELECT] Fetch current user details
+Data: {
+    "sql": "SELECT * FROM user WHERE id_user = ?",
+    "params": [
+        3
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-02 00:39:02] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:39:02] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user@gmail.com"
+    ],
+    "duration": "20.35ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:39:02] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:39:02] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "21.81ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-02 00:39:02] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-02 00:39:02] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2024-12-02 00:39:02",
+        1
+    ],
+    "duration": "39.2ms",
+    "affected_rows": 1
+}
+--------------------

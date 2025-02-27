@@ -1,0 +1,10 @@
+[2024-12-12 22:07:25] [POST_ERROR] Failed to create post
+Exception: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_comment' cannot be null
+File: D:\install\htdocs\MoJu\forum_functions.php
+Line: 12
+Trace: #0 D:\install\htdocs\MoJu\forum_functions.php(12): PDOStatement->execute(Array)
+#1 D:\install\htdocs\MoJu\forum_ajax.php(29): createPost(1, 'dfdf', NULL)
+#2 {main}
+--------------------
+[2024-12-12 22:07:25] [FORUM_AJAX_ERROR] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_comment' cannot be null
+--------------------

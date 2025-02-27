@@ -1,0 +1,1569 @@
+[2024-12-12 22:05:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:40] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user@gmail.com"
+    ],
+    "duration": "44.1ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:05:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:40] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "1.6ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:05:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:40] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2024-12-12 22:05:40",
+        1
+    ],
+    "duration": "15.58ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:05:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:41] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "duration": "20.32ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:05:41] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:05:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:41] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "duration": "15.04ms",
+    "affected_rows": 2
+}
+--------------------
+[2024-12-12 22:05:41] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "rows_returned": 2
+}
+--------------------
+[2024-12-12 22:05:41] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:41] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "15.19ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:05:41] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:05:45] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:45] [QUERY] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "duration": "17.04ms",
+    "affected_rows": 2
+}
+--------------------
+[2024-12-12 22:05:45] [SELECT] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "rows_returned": 2
+}
+--------------------
+[2024-12-12 22:05:45] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:45] [QUERY] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "15.45ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:05:45] [SELECT] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:05:46] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:57] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:57] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "duration": "1.68ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:05:57] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:05:57] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:57] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "duration": "21.08ms",
+    "affected_rows": 3
+}
+--------------------
+[2024-12-12 22:05:57] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "rows_returned": 3
+}
+--------------------
+[2024-12-12 22:05:57] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:57] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "16.27ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:05:57] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:05:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:59] [QUERY] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "duration": "16.09ms",
+    "affected_rows": 3
+}
+--------------------
+[2024-12-12 22:05:59] [SELECT] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "rows_returned": 3
+}
+--------------------
+[2024-12-12 22:05:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:05:59] [QUERY] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "14.81ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:05:59] [SELECT] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:06:06] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:49] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:52] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:52] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "duration": "1.57ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:06:52] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:06:52] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:52] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "duration": "20.46ms",
+    "affected_rows": 4
+}
+--------------------
+[2024-12-12 22:06:52] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2024-12-12 22:06:52] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:52] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "15.44ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:06:52] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:06:54] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:54] [QUERY] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "duration": "17.69ms",
+    "affected_rows": 4
+}
+--------------------
+[2024-12-12 22:06:54] [SELECT] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2024-12-12 22:06:54] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:54] [QUERY] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "41.56ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:06:54] [SELECT] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:06:55] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:59] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "duration": "22.81ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:06:59] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:06:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:59] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "duration": "15.84ms",
+    "affected_rows": 4
+}
+--------------------
+[2024-12-12 22:06:59] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2024-12-12 22:06:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:06:59] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "1.18ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:06:59] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:07:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:07:05] [QUERY] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "duration": "1.28ms",
+    "affected_rows": 4
+}
+--------------------
+[2024-12-12 22:07:05] [SELECT] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2024-12-12 22:07:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:07:05] [QUERY] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "1.52ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:07:05] [SELECT] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:07:19] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:07:25] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:22] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:22] [FORUM] New post created
+Data: {
+    "user_id": 1,
+    "diskusi_id": "1"
+}
+--------------------
+[2024-12-12 22:08:22] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:22] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:22] [QUERY] Query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        1
+    ],
+    "duration": "13.06ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:08:22] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT \r\n                COALESCE(`like`, 0) as is_liked, \r\n                COALESCE(`unlike`, 0) as is_unliked \r\n            FROM like_unlike \r\n            WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        1
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:08:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:26] [QUERY] Query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "duration": "15.7ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:08:26] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:08:26] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:26] [QUERY] First time like/unlike
+Data: {
+    "sql": "INSERT INTO like_unlike \r\n                          (id_user, id_diskusi, `like`, `unlike`) \r\n                          VALUES (?, ?, ?, ?)",
+    "params": [
+        1,
+        "1",
+        1,
+        0
+    ],
+    "duration": "17.45ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:26] [LIKE] User 1 like post 1
+--------------------
+[2024-12-12 22:08:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:28] [QUERY] Query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "duration": "16.36ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:28] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:08:28] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:28] [QUERY] Update like/unlike
+Data: {
+    "sql": "UPDATE like_unlike \r\n                              SET `like` = CASE WHEN ? = 'like' THEN 1 ELSE 0 END,\r\n                                  `unlike` = CASE WHEN ? = 'unlike' THEN 1 ELSE 0 END\r\n                              WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        "unlike",
+        "unlike",
+        1,
+        "1"
+    ],
+    "duration": "31.31ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:28] [LIKE] User 1 unlike post 1
+--------------------
+[2024-12-12 22:08:29] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:29] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:29] [QUERY] Query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "duration": "16.3ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:29] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:08:29] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:29] [QUERY] Update like/unlike
+Data: {
+    "sql": "UPDATE like_unlike \r\n                              SET `like` = CASE WHEN ? = 'like' THEN 1 ELSE 0 END,\r\n                                  `unlike` = CASE WHEN ? = 'unlike' THEN 1 ELSE 0 END\r\n                              WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        "like",
+        "like",
+        1,
+        "1"
+    ],
+    "duration": "15.62ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:29] [LIKE] User 1 like post 1
+--------------------
+[2024-12-12 22:08:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "duration": "27.7ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:08:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:34] [QUERY] Update like/unlike
+Data: {
+    "sql": "UPDATE like_unlike \r\n                              SET `like` = CASE WHEN ? = 'like' THEN 1 ELSE 0 END,\r\n                                  `unlike` = CASE WHEN ? = 'unlike' THEN 1 ELSE 0 END\r\n                              WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        "unlike",
+        "unlike",
+        1,
+        "1"
+    ],
+    "duration": "19.98ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:34] [LIKE] User 1 unlike post 1
+--------------------
+[2024-12-12 22:08:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:35] [QUERY] Query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "duration": "15.98ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:35] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT * FROM like_unlike\r\n                     WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        1,
+        "1"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:08:35] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:35] [QUERY] Update like/unlike
+Data: {
+    "sql": "UPDATE like_unlike \r\n                              SET `like` = CASE WHEN ? = 'like' THEN 1 ELSE 0 END,\r\n                                  `unlike` = CASE WHEN ? = 'unlike' THEN 1 ELSE 0 END\r\n                              WHERE id_user = ? AND id_diskusi = ?",
+    "params": [
+        "like",
+        "like",
+        1,
+        "1"
+    ],
+    "duration": "17.04ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:35] [LIKE] User 1 like post 1
+--------------------
+[2024-12-12 22:08:42] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:42] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "12.3ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:08:48] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:08:48] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "22.88ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:03] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:03] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "admin@gmail.com"
+    ],
+    "duration": "11.87ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:04] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        3
+    ],
+    "duration": "21.57ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:04] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:04] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2024-12-12 22:09:04",
+        3
+    ],
+    "duration": "15.84ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'user'",
+    "params": [],
+    "duration": "1.16ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'user'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'edukasi'",
+    "params": [],
+    "duration": "0.86ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'edukasi'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'admin'",
+    "params": [],
+    "duration": "16.15ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'admin'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'artikel'",
+    "params": [],
+    "duration": "15.71ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'artikel'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(login_at) as hari,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        GROUP BY DAYNAME(login_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "duration": "15.06ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(login_at) as hari,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        GROUP BY DAYNAME(login_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(login_at) as bulan,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        GROUP BY MONTHNAME(login_at)  \n        ORDER BY MONTH(login_at)  \n    ",
+    "params": [],
+    "duration": "15.75ms",
+    "affected_rows": 2
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(login_at) as bulan,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        GROUP BY MONTHNAME(login_at)  \n        ORDER BY MONTH(login_at)  \n    ",
+    "params": [],
+    "rows_returned": 2
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(created_at) as hari,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        AND role = 'user'  \n        GROUP BY DAYNAME(created_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "duration": "3.1ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(created_at) as hari,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        AND role = 'user'  \n        GROUP BY DAYNAME(created_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:09:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:05] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(created_at) as bulan,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        AND role = 'user'  \n        GROUP BY MONTHNAME(created_at)  \n        ORDER BY MONTH(created_at)  \n    ",
+    "params": [],
+    "duration": "25.55ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:05] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(created_at) as bulan,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        AND role = 'user'  \n        GROUP BY MONTHNAME(created_at)  \n        ORDER BY MONTH(created_at)  \n    ",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:14] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:18] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "duration": "21.57ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:18] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:18] [QUERY] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "duration": "14.91ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:18] [SELECT] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:18] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:18] [QUERY] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "duration": "1.99ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:09:18] [SELECT] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:09:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:09:40] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:53] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:53] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "duration": "26.61ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:53] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:53] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:53] [QUERY] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "duration": "1.78ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:53] [SELECT] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:53] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:53] [QUERY] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "duration": "13.65ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:53] [SELECT] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:55] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:55] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "duration": "20.17ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:55] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:55] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:55] [QUERY] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%d%",
+        "%d%",
+        5,
+        0
+    ],
+    "duration": "15.08ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:55] [SELECT] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%d%",
+        "%d%",
+        5,
+        0
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:55] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:55] [QUERY] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%d%",
+        "%d%"
+    ],
+    "duration": "14.81ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:55] [SELECT] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%d%",
+        "%d%"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:55] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:55] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "duration": "15.08ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:55] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:55] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:55] [QUERY] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%dfgdfg%",
+        "%dfgdfg%",
+        5,
+        0
+    ],
+    "duration": "14.95ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:10:55] [SELECT] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%dfgdfg%",
+        "%dfgdfg%",
+        5,
+        0
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:10:55] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:55] [QUERY] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%dfgdfg%",
+        "%dfgdfg%"
+    ],
+    "duration": "14.84ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:55] [SELECT] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%dfgdfg%",
+        "%dfgdfg%"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:56] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "duration": "1.23ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:56] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:56] [QUERY] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%dfgdfgdfg%",
+        "%dfgdfgdfg%",
+        5,
+        0
+    ],
+    "duration": "11.43ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:10:56] [SELECT] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%dfgdfgdfg%",
+        "%dfgdfgdfg%",
+        5,
+        0
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:10:56] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:56] [QUERY] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%dfgdfgdfg%",
+        "%dfgdfgdfg%"
+    ],
+    "duration": "15.47ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:56] [SELECT] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%dfgdfgdfg%",
+        "%dfgdfgdfg%"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:59] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "duration": "12.86ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:59] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:59] [QUERY] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "duration": "15.45ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:59] [SELECT] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:10:59] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:10:59] [QUERY] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "duration": "1.13ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:10:59] [SELECT] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:11:05] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:11:05] [QUERY] Fetch current user details
+Data: {
+    "sql": "SELECT * FROM user WHERE id_user = ?",
+    "params": [
+        3
+    ],
+    "duration": "15.96ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:11:05] [SELECT] Fetch current user details
+Data: {
+    "sql": "SELECT * FROM user WHERE id_user = ?",
+    "params": [
+        3
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:11:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:11:34] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "duration": "19.54ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:11:34] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as total FROM user WHERE role IN ('admin', 'admin artikel')",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:11:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:11:34] [QUERY] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "duration": "15.07ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:11:34] [SELECT] Fetch admin users with pagination
+Data: {
+    "sql": "SELECT id_user, nama,email , tanggal_lahir, role, created_at  \r\n              FROM user   \r\n              WHERE (nama LIKE ? OR role LIKE ?)   \r\n              AND role IN ('admin', 'admin artikel')  \r\n              ORDER BY `nama` ASC  \r\n              LIMIT ? OFFSET ?",
+    "params": [
+        "%%",
+        "%%",
+        5,
+        0
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:11:34] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:11:34] [QUERY] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "duration": "16.01ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:11:34] [SELECT] Count filtered admin users
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n                    FROM user   \r\n                    WHERE (nama LIKE ? OR role LIKE ?)   \r\n                    AND role IN ('admin', 'admin artikel')",
+    "params": [
+        "%%",
+        "%%"
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:14:49] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:14:49] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'user'",
+    "params": [],
+    "duration": "1.16ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'user'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'edukasi'",
+    "params": [],
+    "duration": "1.32ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'edukasi'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'admin'",
+    "params": [],
+    "duration": "18.88ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM user WHERE role = 'admin'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'artikel'",
+    "params": [],
+    "duration": "15.55ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "SELECT COUNT(*) as count FROM artikel WHERE jenis = 'artikel'",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(login_at) as hari,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        GROUP BY DAYNAME(login_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "duration": "14.98ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(login_at) as hari,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        GROUP BY DAYNAME(login_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(login_at) as bulan,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        GROUP BY MONTHNAME(login_at)  \n        ORDER BY MONTH(login_at)  \n    ",
+    "params": [],
+    "duration": "15.49ms",
+    "affected_rows": 2
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(login_at) as bulan,   \n            COUNT(*) as total_login   \n        FROM islogin i  \n        JOIN user u ON i.id_user = u.id_user  \n        WHERE login_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        GROUP BY MONTHNAME(login_at)  \n        ORDER BY MONTH(login_at)  \n    ",
+    "params": [],
+    "rows_returned": 2
+}
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(created_at) as hari,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        AND role = 'user'  \n        GROUP BY DAYNAME(created_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "duration": "1.49ms",
+    "affected_rows": 0
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            DAYNAME(created_at) as hari,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)  \n        AND role = 'user'  \n        GROUP BY DAYNAME(created_at)  \n        ORDER BY FIELD(hari, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')  \n    ",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2024-12-12 22:15:12] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:15:12] [QUERY] Query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(created_at) as bulan,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        AND role = 'user'  \n        GROUP BY MONTHNAME(created_at)  \n        ORDER BY MONTH(created_at)  \n    ",
+    "params": [],
+    "duration": "14ms",
+    "affected_rows": 1
+}
+--------------------
+[2024-12-12 22:15:12] [SELECT] Select query executed
+Data: {
+    "sql": "  \n        SELECT   \n            MONTHNAME(created_at) as bulan,   \n            COUNT(*) as total_user   \n        FROM user  \n        WHERE created_at >= DATE_SUB(CURRENT_DATE, INTERVAL 12 MONTH)  \n        AND role = 'user'  \n        GROUP BY MONTHNAME(created_at)  \n        ORDER BY MONTH(created_at)  \n    ",
+    "params": [],
+    "rows_returned": 1
+}
+--------------------
+[2024-12-12 22:17:48] [DATABASE] Database connection established successfully
+--------------------
+[2024-12-12 22:17:48] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "usermakan@gmail.com"
+    ],
+    "duration": "20.38ms",
+    "affected_rows": 0
+}
+--------------------

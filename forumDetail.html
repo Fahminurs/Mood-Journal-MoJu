@@ -1,0 +1,398 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Forum Diskusi - MOJU</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
+    <link rel="stylesheet" href="Assets/css/forumDetail.css"> 
+</head>  
+<body>  
+    <nav class="sidebar">  
+        <div class="logo">MOJU</div>  
+        <div class="nav-divider"></div> <!-- Tambahkan garis pemisah -->  
+        <div class="nav-item active">  
+            <i class="fas fa-home"></i>  
+           
+        </div>  
+        
+        <div class="nav-item">  
+            <i class="fa-solid fa-comment"></i>
+        </div>  
+        <div class="nav-item">  
+            <i class="fas fa-cog"></i>  
+        </div>  
+        <div class="nav-divider"></div> <!-- Tambahkan garis pemisah -->  
+    </nav>  
+
+    <nav class="sidebar-mobile">
+        <h2 class="logo-mobile">MoJu</h2>
+        <h2 class="title" >Detail Postingan</h2>
+    </nav>
+
+    <div class="main-content">  
+        <nav class="header">  
+            <h1>Detail Postingan</h1>  
+     
+        </nav>  
+        <div class="forum-detail">  
+            <button class="delete-btn">  
+                <i class="fas fa-trash"></i>  
+            </button>  
+            
+            <div class="user-card">  
+                <img src="Assets/img/foto-profile/example.png">  
+                <span>Anonymous #122</span>  
+            </div>  
+        
+            <div class="post-content">  
+                Saya mengalami, Lorem Ipsum is simply dummy text of the printing and typesetting industry...  
+            </div>  
+        
+            <div class="action-buttons">  
+                <div class="action-btn">  
+                    <i class="far fa-thumbs-up"></i>  
+                    <span>17</span>  
+                </div>  
+                <div class="action-btn">  
+                    <i class="far fa-thumbs-down"></i>  
+                </div>  
+                <div class="action-btn">  
+                    <i class="far fa-comment"></i>  
+                    <span>17</span>  
+                </div>  
+            </div>  
+        
+            <div class="comments-section">  
+                <div class="comment-header-container">  
+                    <div class="comment-line"></div>  
+                    <h2 class="comment-header-text">Komentar</h2>  
+                    <div class="comment-line"></div>  
+                </div>  
+                
+                <div class="comment-input-container">  
+                    <textarea class="comment-input" placeholder="Tambahkan Komentar"></textarea>  
+                    <div class="comment-actions">  
+                        <button class="btn btn-cancel">Cancel</button>  
+                        <button class="btn btn-comment">Comment</button>  
+                    </div>  
+                </div>   
+        
+                <!-- Repeat for each comment -->  
+                <div class="comment">  
+                    <div class="user-card komen">  
+                        <img src="Assets/img/foto-profile/example.png">  
+                        <span>Anonymous #122</span>  
+                    </div>  
+                    <div class="isi-komen">  
+                        <button class="delete-btn komen"><i class="fas fa-trash"></i></button>  
+                        Saya mengalami, Lorem ipsum...  
+                        <button class="reply-btn"> <i class="far fa-comment"></i> Reply</button>  
+                    </div>  
+                    <div class="reply-form hidden"></div>  
+                </div>  
+                </div> 
+                         <!-- Nested comment -->  
+                         <div class="comment comment-nested">  
+                            <div class="user-card komen">  
+                                <img src="Assets/img/foto-profile/example.png">  
+                                <span>Anonymous #122</span>  
+                            </div>  
+                            <div class="isi-komen">  
+                                <button class="delete-btn komen"><i class="fas fa-trash"></i></button>  
+                                Saya mengalami, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia atque doloremque obcaecati alias perspiciatis asperiores soluta deserunt at aperiam tempora laborum placeat possimus, dignissimos dolor unde debitis repudiandae, assumenda omnis?
+                                <button class="reply-btn"> <i class="far fa-comment"></i> Reply</button>  
+                            </div> 
+                            <div class="reply-form hidden"></div>    
+                        </div>   
+                        <div class="comment">  
+                            <div class="user-card komen">  
+                                <img src="Assets/img/foto-profile/example.png">  
+                                <span>Anonymous #122</span>  
+                            </div>  
+                            <div class="isi-komen">  
+                                <button class="delete-btn komen"><i class="fas fa-trash"></i></button>  
+                                Saya mengalami, Lorem ipsum...  
+                                <button class="reply-btn"> <i class="far fa-comment"></i> Reply</button>  
+                            </div>  
+                            <div class="reply-form hidden"></div>  
+                        </div>  
+                        </div> 
+
+                        <!-- form untuk reply -->
+                        <div class="textarea-container">  
+                            <textarea class="reply-input" placeholder="Tulis balasan..."></textarea>  
+                            <div class="reply-actions">  
+                                <button class="btn btn-cancel-reply">Cancel</button>  
+                                <button class="btn btn-submit-reply">Reply</button>  
+                            </div>  
+                        </div> 
+        
+       
+            </div>  
+        </div> 
+
+       
+    </div>  
+<!-- End Navigation -->
+      
+    <script>  
+        // Fungsi untuk toggle active class pada nav items  
+        document.querySelectorAll('.nav-item').forEach(item => {  
+            item.addEventListener('click', function() {  
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));  
+                this.classList.add('active');  
+            });  
+        });  
+
+        // Fungsi untuk delete note  
+        document.querySelector('.delete-btn').addEventListener('click', function() {  
+            const noteCard = this.closest('.note-card');  
+            noteCard.style.display = 'none';  
+        });  
+    </script>  
+    <!-- Navigation -->
+      <script>  
+        const list = document.querySelectorAll('.list-moju');  
+        const indikator = document.querySelector('.indikator-moju');  
+        
+        function updateIndicatorPosition(activeItem) {  
+            if (activeItem) {  
+                const ul = activeItem.parentElement;  
+                const ulLeftOffset = ul.offsetLeft;  
+                const liWidth = activeItem.offsetWidth;  
+                const liLeftOffset = activeItem.offsetLeft;  
+                const correctOffset = liLeftOffset - ulLeftOffset;  
+        
+                indikator.style.width = `${liWidth}px`;  
+                indikator.style.transform = `translateX(${correctOffset}px)`;  
+            }  
+        }  
+        
+        function activeLink() {  
+            list.forEach((item) => {  
+                item.classList.remove('active');  
+            });  
+            
+            this.classList.add('active');  
+            updateIndicatorPosition(this);  
+        }  
+        
+        list.forEach((item) => {  
+            item.addEventListener('click', activeLink);  
+        });  
+        
+        document.addEventListener('DOMContentLoaded', () => {  
+            const activeItem = document.querySelector('.list-moju.active');  
+            if (activeItem) {  
+                updateIndicatorPosition(activeItem);  
+            }  
+        });  
+        
+        window.addEventListener('resize', () => {  
+            const activeItem = document.querySelector('.list-moju.active');  
+            if (activeItem) {  
+                updateIndicatorPosition(activeItem);  
+            }  
+        });  
+        </script>
+        <script>  
+            document.addEventListener('DOMContentLoaded', function() {  
+                const textarea = document.querySelector('.comment-input');  
+                const cancelBtn = document.querySelector('.btn-cancel');  
+            
+                // Function to expand textarea  
+                function expandTextarea() {  
+                    if (!textarea.classList.contains('expanded')) {  
+                        textarea.classList.add('expanded');  
+                    }  
+                }  
+            
+                // Function to collapse textarea  
+                function collapseTextarea() {  
+                    textarea.classList.remove('expanded');  
+                    textarea.value = ''; // Clear the textarea content  
+                }  
+            
+                // Event listener for textarea click  
+                textarea.addEventListener('click', expandTextarea);  
+            
+                // Event listener for textarea focus  
+                textarea.addEventListener('focus', expandTextarea);  
+            
+                // Event listener for cancel button  
+                cancelBtn.addEventListener('click', collapseTextarea);  
+            
+                // Optional: Close on click outside  
+                document.addEventListener('click', function(event) {  
+                    const isClickInside = textarea.contains(event.target) ||   
+                                        event.target.classList.contains('btn');  
+                    
+                    if (!isClickInside && textarea.classList.contains('expanded') &&   
+                        textarea.value.trim() === '') {  
+                        collapseTextarea();  
+                    }  
+                });  
+            
+                // Prevent textarea from closing when clicking buttons  
+                document.querySelectorAll('.btn').forEach(button => {  
+                    button.addEventListener('click', (e) => {  
+                        e.stopPropagation();  
+                    });  
+                });  
+            });  
+            </script> 
+<script>
+    function initReplySystem() {  
+    const replyFormTemplate = document.querySelector('.textarea-container').outerHTML;  
+    document.querySelector('.textarea-container').remove();  
+
+    // Inisialisasi level untuk komentar yang sudah ada  
+    document.querySelectorAll('.comment').forEach(comment => {  
+        if (!comment.hasAttribute('data-level')) {  
+            if (comment.classList.contains('comment-nested')) {  
+                // Hitung level berdasarkan parent  
+                let level = 1;  
+                let parent = comment.previousElementSibling;  
+                while (parent && parent.classList.contains('comment-nested')) {  
+                    level++;  
+                    parent = parent.previousElementSibling;  
+                }  
+                comment.setAttribute('data-level', level);  
+                comment.style.marginLeft = `${40 * level}px`;  
+                comment.style.width = `calc(100% - ${40 * level}px)`;  
+            } else {  
+                comment.setAttribute('data-level', '0');  
+            }  
+        }  
+    });  
+
+    // Tambahkan event listener untuk semua tombol reply  
+    document.querySelectorAll('.reply-btn').forEach(button => {  
+        button.addEventListener('click', function(e) {  
+            e.preventDefault();  
+            
+            document.querySelectorAll('.reply-form').forEach(form => {  
+                form.classList.add('hidden');  
+                form.innerHTML = '';  
+            });  
+
+            const replyForm = this.closest('.comment').querySelector('.reply-form');  
+            replyForm.innerHTML = replyFormTemplate;  
+            replyForm.classList.remove('hidden');  
+            replyForm.querySelector('.reply-input').focus();  
+
+            setupReplyFormButtons(replyForm, this.closest('.comment'));  
+        });  
+    });  
+}  
+
+function createNestedComment(parentComment, replyText) {  
+    // Buat element comment baru  
+    const nestedComment = document.createElement('div');  
+    nestedComment.className = 'comment comment-nested';  
+    
+    // Hitung level nested  
+    const parentLevel = parseInt(parentComment.getAttribute('data-level') || '0');  
+    const newLevel = parentLevel + 1;  
+    nestedComment.setAttribute('data-level', newLevel);  
+    
+    // Tambahkan margin sesuai level  
+    const baseMargin = 40; // margin dasar dalam pixel  
+    nestedComment.style.marginLeft = `${baseMargin * newLevel}px`;  
+    nestedComment.style.width = `calc(100% - ${baseMargin * newLevel}px)`;  
+    
+    // Isi HTML untuk nested comment  
+    nestedComment.innerHTML = `  
+        <div class="user-card komen">  
+            <img src="Assets/img/foto-profile/example.png">  
+            <span>Anonymous #122</span>  
+        </div>  
+        <div class="isi-komen">  
+            <button class="delete-btn komen"><i class="fas fa-trash"></i></button>  
+            ${replyText}  
+            <button class="reply-btn"> <i class="far fa-comment"></i> Reply</button>  
+        </div>  
+        <div class="reply-form hidden"></div>  
+    `;  
+
+    // Tambahkan event listener untuk tombol reply yang baru  
+    const newReplyBtn = nestedComment.querySelector('.reply-btn');  
+    newReplyBtn.addEventListener('click', function(e) {  
+        e.preventDefault();  
+        
+        document.querySelectorAll('.reply-form').forEach(form => {  
+            form.classList.add('hidden');  
+            form.innerHTML = '';  
+        });  
+
+        const replyForm = this.closest('.comment').querySelector('.reply-form');  
+        replyForm.innerHTML = replyFormTemplate;  
+        replyForm.classList.remove('hidden');  
+        replyForm.querySelector('.reply-input').focus();  
+
+        setupReplyFormButtons(replyForm, this.closest('.comment'));  
+    });  
+
+    // Tentukan posisi untuk memasukkan komentar nested  
+    const nextComment = parentComment.nextElementSibling;  
+    if (nextComment && parseInt(nextComment.getAttribute('data-level') || '0') <= parentLevel) {  
+        // Jika komen berikutnya memiliki level yang sama atau lebih rendah  
+        parentComment.parentNode.insertBefore(nestedComment, nextComment);  
+    } else {  
+        // Cari posisi yang tepat berdasarkan level  
+        let lastNested = parentComment;  
+        while (lastNested.nextElementSibling &&   
+               parseInt(lastNested.nextElementSibling.getAttribute('data-level') || '0') > parentLevel) {  
+            lastNested = lastNested.nextElementSibling;  
+        }  
+        if (lastNested.nextElementSibling) {  
+            parentComment.parentNode.insertBefore(nestedComment, lastNested.nextElementSibling);  
+        } else {  
+            parentComment.parentNode.appendChild(nestedComment);  
+        }  
+    }  
+}  
+
+function setupReplyFormButtons(replyForm, parentComment) {  
+    // Event listener untuk tombol cancel  
+    replyForm.querySelector('.btn-cancel-reply').addEventListener('click', function(e) {  
+        e.preventDefault();  
+        replyForm.classList.add('hidden');  
+        replyForm.innerHTML = '';  
+    });  
+
+    // Event listener untuk tombol submit reply  
+    replyForm.querySelector('.btn-submit-reply').addEventListener('click', function(e) {  
+        e.preventDefault();  
+        const replyText = replyForm.querySelector('.reply-input').value;  
+        
+        if (replyText.trim()) {  
+            // Buat nested comment baru  
+            createNestedComment(parentComment, replyText);  
+            
+            // Clear dan sembunyikan form  
+            replyForm.classList.add('hidden');  
+            replyForm.innerHTML = '';  
+        }  
+    });  
+}  
+
+// Simpan template untuk digunakan nanti  
+let replyFormTemplate;  
+
+// Panggil fungsi saat DOM selesai dimuat  
+if (document.readyState === 'loading') {  
+    document.addEventListener('DOMContentLoaded', function() {  
+        replyFormTemplate = document.querySelector('.textarea-container').outerHTML;  
+        initReplySystem();  
+    });  
+} else {  
+    replyFormTemplate = document.querySelector('.textarea-container').outerHTML;  
+    initReplySystem();  
+}
+</script> 
+</body>  
+</html>

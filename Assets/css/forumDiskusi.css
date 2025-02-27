@@ -1,0 +1,648 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: 'Poppins', sans-serif;  
+}  
+
+body {  
+    background: #FFDAB9;  
+    min-height: 100vh;  
+}  
+
+/* Sidebar */
+/* Sidebar Container */  
+.sidebar {  
+width: 80px;  
+height: 695px;  
+background: #5B6079;  
+position: fixed;  
+left: 25px;  
+top: 120px;  
+display: flex;  
+flex-direction: column;  
+align-items: center;  
+padding-top: 150px;  
+border-radius: 15px;  
+gap: 40px;  
+}  
+
+
+/* Logo Style */  
+.logo {  
+position: fixed;  
+left: 10px;  
+top: 20px;  
+color: #000;  
+-webkit-text-stroke: 4px #000;  
+text-stroke: 4px #000;  
+-webkit-text-stroke-color: #000;  
+font-family: "Sankofa Display";  
+font-size: 60px;  
+font-weight: 400;  
+z-index: 1000;  
+}  
+
+/* Navigation Items */  
+.nav-item {  
+width: 44px;  
+height: 44px;  
+display: flex;  
+align-items: center;  
+justify-content: center;  
+cursor: pointer;  
+color: white;  
+font-size: 20px;  
+transition: all 0.3s ease;  
+margin-bottom: 10px;  
+}  
+
+.nav-item i {  
+color: white;  
+font-size: 24px;  
+}  
+
+/* Active Navigation Item */  
+.nav-item.active {  
+background: rgba(245, 245, 245, 0.55);  
+border-radius: 11px;  
+color: #5B6079;  
+}  
+
+.nav-item.active i {  
+color: #5B6079;  
+}  
+
+/* Divider Line */  
+.nav-divider {  
+width: 40px;  
+height: 1px;  
+background: rgba(255, 255, 255, 0.2);  
+margin: 10px 0;  
+}  
+/* siderbar end */
+
+/* Nav forum diskusi */
+.header {  
+width: 100%;  
+height: 89px;  
+border-radius: 14px;  
+
+display: flex;  
+align-items: center;  
+justify-content: space-between; /* Tambahkan ini */  
+}  
+
+.header h1 {  
+color: #000000;  
+font-size: 30px;  
+font-weight: 800;  
+position: absolute;  
+left: 45%;  
+transform: translateX(-10%);  
+transform: translatey(-18%);  
+margin: 0;  
+}  
+
+.post-button {  
+background: #8E7892;  
+padding: 12px 24px;  
+border-radius: 10px;  
+border: none;  
+color: white;  
+cursor: pointer;  
+display: flex;  
+align-items: center;  
+gap: 8px;  
+font-weight: 500;  
+font-size: 16px;  
+margin-left: auto; /* Memastikan button di kanan */  
+}  
+
+/* Styling untuk post button floating */  
+.post-button.floating {  
+position: fixed;  
+bottom: 80px; /* Sesuaikan dengan navigation bar */  
+right: 30px;  
+
+width: 140px;  
+height: 60px;  
+padding: 0;  
+justify-content: center;  
+background: #8E7892;  
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  
+transform: scale(1);  
+z-index: 1000;  
+}  
+
+/* Animasi untuk teks saat floating */  
+.post-button.floating span {  
+display: none;  
+}  
+
+/* Animasi hover untuk floating button */  
+.post-button.floating:hover {  
+transform: scale(1.1);  
+background: #7a6579;  
+}  
+
+/* Animasi muncul */  
+@keyframes fadeInUp {  
+from {  
+opacity: 0;  
+transform: translateY(20px);  
+}  
+to {  
+opacity: 1;  
+transform: translateY(0);  
+}  
+}  
+
+.post-button.floating {  
+animation: fadeInUp 0.3s ease;  
+}  
+
+/* Tambahkan ini untuk membuat spacing di kiri agar seimbang dengan button */  
+.header::before {  
+content: '';  
+width: 116px; /* Sesuaikan dengan lebar button */  
+visibility: hidden;  
+} 
+
+/* end nav forum diskusi */
+
+
+/* Main Content */  
+.main-content {  
+    margin-left: 125px;  
+    padding: 20px;  
+}  
+
+
+
+
+
+/* Forum Cards */  
+.forum-card {  
+    background: #F29440;  
+    border-radius: 20px;  
+    padding: 20px;  
+    margin-bottom: 20px;  
+}  
+
+.user-info {  
+    background: white;  
+    border-radius: 4px;  
+    padding: 8px 15px 8px 5px ; 
+    display: inline-flex;  
+    align-items: center;  
+    gap: 10px;  
+    margin-bottom: 15px;  
+}  
+
+.user-info img {  
+    width: 30px;  
+    height: 30px;  
+    border-radius: 50%;  
+}  
+
+.user-info span {  
+    color: #3A3B7B;  
+    color: #3A3B7B;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+}  
+
+.post-content {  
+    color: #3A3B7B;  
+    margin-bottom: 20px;  
+    line-height: 1.6;  
+    background: white;  
+    padding: 15px;  
+    border-radius: 8px;  
+    font-size:12px;
+}  
+
+.post-actions {  
+    display: flex;  
+    gap: 4px;  
+}  
+
+.action-btn {  
+    display: flex;  
+    align-items: center;  
+    gap: 5px;  
+    background: white;  
+    padding: 5px 15px;  
+    border-radius: 20px;  
+    cursor: pointer;  
+}  
+
+.action-btn i {  
+    color: #3A3B7B;  
+}  
+
+.action-btn span {  
+    color: #3A3B7B;  
+    font-weight: 500; 
+    font-size: 12px; 
+}  
+/* Sidebar Mobile */  
+.sidebar-mobile {  
+display: none; /* Hidden by default dan tetap hidden pada desktop */  
+position: fixed;  
+top: 0;  
+left: 0;  
+right: 0;  
+background: #5B6079;  
+padding: 12px 20px;  
+z-index: 1000;  
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);  
+align-items: center;  
+justify-content: space-between;
+gap: 15px;  
+}  
+
+.sidebar-mobile h2.logo-mobile {  
+color: white;  
+margin: 0;  
+font-family: "Sankofa Display";  
+-webkit-text-stroke: 1px #ffffff; /* Untuk Chrome/Safari */  
+text-stroke: 1px #000; /* Standar */  
+font-weight: 400;   
+font-size: 25px;
+} 
+
+.sidebar-mobile h2.title {  
+color: white;
+font-size: 16px;  
+font-weight: 800;  
+position: relative;
+left: -8px;
+bottom: -1px;
+font-family: 'poppins', sans-serif;
+}  
+
+    
+
+@media screen and (max-width: 1000px) {  
+ 
+    .post-button.floating{
+    bottom: 13px; /* Sesuaikan dengan navigation bar */
+    right: 12px;
+}
+.sidebar-mobile {  
+display: flex; /* Hanya tampilkan flex pada ukuran tablet dan mobile */  
+}  
+
+    .forum-card {
+    
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}  
+.header::before {  
+display: none;  
+}  
+
+.header {  
+display: none;
+}  
+
+.header h1 {  
+display: none;
+}  
+.jarak-mobile{
+margin: 50px;
+}
+
+/* Styling khusus untuk post button di mobile */  
+.post-button {  
+position: relative;  
+padding: 8px 16px; /* Ukuran lebih kecil */  
+font-size: 14px;  
+}  
+    .main-content {
+        margin-left: 0;
+    }
+    .Navigation-moju{
+position: fixed;
+bottom: 0px;
+left: 0px;
+right: 0px;
+z-index: 98;
+/* width: 400px;
+height: 60px; */
+min-height: 61px;
+background: #5B6079;  
+display: flex;
+justify-content: center;
+align-items: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+
+}
+
+
+.Navigation-moju ul{
+display: flex;
+/* width: 350px; */
+/* border: 1px solid black; */
+justify-content: space-between;
+width:90%;
+
+
+}
+
+.Navigation-moju ul li {
+list-style:none;
+position: relative;
+width: 70px;
+height:60px ;
+z-index: 2;
+
+/* background-color: aqua; */
+/* margin: 0 10px; */
+
+
+
+}
+
+
+
+
+.Navigation-moju ul li a{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+text-align: center;
+}
+
+.Navigation-moju ul li a .icon-moju{
+position: relative;
+display: block;
+line-height: 65px;
+font-size: 1.5em;
+transition: 0.5s ;
+color: #fff; 
+
+}
+
+.Navigation-moju ul li.active a .icon-moju{
+
+transform:translateY(-32px) ;
+/* color: #2196f3; */
+
+}
+
+.Navigation-moju ul li a .text{
+position: absolute;
+background: #D2809C;
+color: #ffffff;
+padding: 2px 7px;
+border-radius: 12px;
+font-weight: 400;
+font-size: 0.75em;
+letter-spacing: 0.05em;
+transition: 0.5s;
+opacity: 0;
+transform: translateY(15px);
+top:30px;
+}
+
+.Navigation-moju ul li.active a .text{
+transform: translateY(-4px);
+opacity: 1;
+
+
+}
+
+.indikator-moju{
+position: absolute;
+top: -35px;
+width: 70px;
+height: 70px;
+background: #5B6079;  
+border-radius: 50%;
+z-index: 1;
+transition: 0.5s;
+}
+
+.indikator-moju::before{
+content: ' ';
+position: absolute;
+top: 5px;
+left: -27px;
+width: 30px;
+height: 30px;
+background: transparent;
+border-radius: 50%;
+box-shadow: 15px 18px #5B6079;
+}
+
+.indikator-moju::after{
+content: '';
+position: absolute;
+top: 5px;
+right: -28px;
+width: 30px;
+height: 30px;
+background: transparent;
+border-radius: 50%;
+box-shadow: -15px 18px #5B6079;
+}
+
+.sidebar {  
+display: none;  
+}  
+
+
+}
+
+/* Modal Styles */  
+.modal-overlay {  
+position: fixed;  
+top: 0;  
+left: 0;  
+right: 0;  
+bottom: 0;  
+background: rgba(0, 0, 0, 0.7);  
+backdrop-filter: blur(5px);  
+z-index: 1000;  
+opacity: 0;  
+visibility: hidden;  
+transition: all 0.3s ease;  
+}  
+
+.modal {  
+position: fixed;  
+top: 50%;  
+left: 50%;  
+transform: translate(-50%, -50%) scale(0.9);  
+background: white;  
+border-radius: 20px;  
+width: 90%;  
+max-width: 600px;  
+z-index: 1001;  
+opacity: 0;  
+visibility: hidden;  
+transition: all 0.3s ease;  
+overflow: hidden;  
+box-shadow: 0 15px 35px rgba(0,0,0,0.2);  
+}  
+
+.modal.active,  
+.modal-overlay.active {  
+opacity: 1;  
+visibility: visible;  
+}  
+
+.modal.active {  
+transform: translate(-50%, -50%) scale(1);  
+}  
+
+.modal-header {  
+padding: 20px;  
+border-bottom: 1px solid #eee;  
+display: flex;  
+justify-content: space-between;  
+align-items: center;  
+}  
+
+.modal-header h2 {  
+font-size: 1.5rem;  
+color: #2C3E50;  
+font-weight: 600;  
+}  
+
+.close-modal {  
+background: none;  
+border: none;  
+font-size: 1.2rem;  
+color: #95A5A6;  
+cursor: pointer;  
+padding: 5px;  
+transition: all 0.2s ease;  
+}  
+
+.close-modal:hover {  
+color: #2C3E50;  
+transform: rotate(90deg);  
+}  
+
+.modal-body {  
+padding: 20px;  
+max-height: calc(100vh - 200px);  
+overflow-y: auto;  
+}  
+
+.input-group {  
+margin-bottom: 20px;  
+position: relative;  
+}  
+
+.input-group label {  
+display: block;  
+margin-bottom: 8px;  
+color: #2C3E50;  
+font-weight: 500;  
+}  
+
+.input-group input,  
+.input-group textarea {  
+width: 100%;  
+padding: 12px 15px;  
+border: 2px solid #E0E0E0;  
+border-radius: 12px;  
+font-size: 1rem;  
+transition: all 0.2s ease;  
+background: #F8F9FA;  
+}  
+
+.input-group textarea {  
+height: 200px;  
+resize: none;  
+}  
+
+.input-group input:focus,  
+.input-group textarea:focus {  
+outline: none;  
+border-color: #6C5B7B;  
+background: white;  
+}  
+
+.char-counter {  
+position: absolute;  
+right: 10px;  
+bottom: 10px;  
+font-size: 0.8rem;  
+color: #95A5A6;  
+}  
+
+
+
+.modal-footer {  
+padding: 20px;  
+border-top: 1px solid #eee;  
+display: flex;  
+justify-content: flex-end;  
+gap: 15px;  
+}  
+
+.cancel-btn,  
+.post-btn {  
+padding: 12px 24px;  
+border-radius: 12px;  
+border: none;  
+font-size: 1rem;  
+cursor: pointer;  
+transition: all 0.2s ease;  
+}  
+
+.cancel-btn {  
+background: #ECF0F1;  
+color: #7F8C8D;  
+}  
+
+.post-btn {  
+background: linear-gradient(135deg, #8E7892, #6C5B7B);  
+color: white;  
+}  
+
+.cancel-btn:hover,  
+.post-btn:hover {  
+transform: translateY(-2px);  
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);  
+}  
+
+/* Responsive Design */  
+@media screen and (max-width: 768px) {  
+.modal {  
+width: 95%;  
+}  
+
+.modal-header h2 {  
+font-size: 1.2rem;  
+}  
+
+.modal-body {  
+padding: 15px;  
+}  
+
+.input-group input,  
+.input-group textarea {  
+padding: 10px;  
+}  
+
+.attachment-section {  
+flex-direction: column;  
+align-items: flex-start;  
+gap: 10px;  
+}  
+}

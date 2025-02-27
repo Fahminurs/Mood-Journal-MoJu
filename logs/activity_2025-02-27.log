@@ -1,0 +1,461 @@
+[2025-02-27 14:18:08] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:08] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user@gmail.com"
+    ],
+    "duration": "54.25ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:18:08] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:08] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "35.05ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:18:08] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:08] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2025-02-27 14:18:08",
+        1
+    ],
+    "duration": "24.61ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:18:10] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:10] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "duration": "42.93ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:18:10] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2025-02-27 14:18:10] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:10] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "duration": "19.52ms",
+    "affected_rows": 4
+}
+--------------------
+[2025-02-27 14:18:10] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2025-02-27 14:18:10] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:10] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "3.67ms",
+    "affected_rows": 0
+}
+--------------------
+[2025-02-27 14:18:10] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2025-02-27 14:18:15] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:15] [QUERY] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "duration": "14.1ms",
+    "affected_rows": 4
+}
+--------------------
+[2025-02-27 14:18:15] [SELECT] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2025-02-27 14:18:15] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:15] [QUERY] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "11.52ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:18:15] [SELECT] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2025-02-27 14:18:30] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:18:30] [QUERY] Query executed
+Data: {
+    "sql": "SELECT username, nama, email, tanggal_lahir , foto_profile FROM user WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "2.36ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:19:03] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:19:09] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:19:09] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user43@gmail.com"
+    ],
+    "duration": "2.42ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:19:09] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:19:09] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        9
+    ],
+    "duration": "22.56ms",
+    "affected_rows": 0
+}
+--------------------
+[2025-02-27 14:19:09] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:19:09] [QUERY] Query executed
+Data: {
+    "sql": "INSERT INTO islogin (id_user, login_at) VALUES (?, ?)",
+    "params": [
+        9,
+        "2025-02-27 14:19:09"
+    ],
+    "duration": "33.78ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 14:19:11] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:19:11] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        9
+    ],
+    "duration": "20.98ms",
+    "affected_rows": 0
+}
+--------------------
+[2025-02-27 14:19:11] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        9
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2025-02-27 14:19:11] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:19:11] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        9
+    ],
+    "duration": "11.33ms",
+    "affected_rows": 0
+}
+--------------------
+[2025-02-27 14:19:11] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        9
+    ],
+    "rows_returned": 0
+}
+--------------------
+[2025-02-27 14:19:11] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:19:11] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "2.4ms",
+    "affected_rows": 0
+}
+--------------------
+[2025-02-27 14:19:11] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2025-02-27 14:19:32] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 14:45:55] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:20:49] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:20:49] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_user, username, email,foto_profile, password, role FROM user WHERE email = ?",
+    "params": [
+        "user@gmail.com"
+    ],
+    "duration": "3.65ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 16:20:49] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:20:49] [QUERY] Query executed
+Data: {
+    "sql": "SELECT id_islogin FROM islogin WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "16.34ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 16:20:49] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:20:49] [QUERY] Query executed
+Data: {
+    "sql": "UPDATE islogin SET login_at = ? WHERE id_user = ?",
+    "params": [
+        "2025-02-27 16:20:49",
+        1
+    ],
+    "duration": "2.85ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 16:20:51] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:20:51] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "duration": "22.82ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 16:20:51] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2025-02-27 16:20:51] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:20:51] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "duration": "15.46ms",
+    "affected_rows": 4
+}
+--------------------
+[2025-02-27 16:20:51] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2025-02-27 16:20:51] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:20:51] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "14.56ms",
+    "affected_rows": 0
+}
+--------------------
+[2025-02-27 16:20:51] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2025-02-27 16:20:53] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:21:18] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:21:37] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:21:37] [QUERY] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "duration": "15.87ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 16:21:37] [SELECT] Get Dominant Mood
+Data: {
+    "sql": "SELECT mood, COUNT(*) as mood_count \r\n               FROM journal \r\n               WHERE id_user = ? \r\n               GROUP BY mood \r\n               ORDER BY mood_count DESC \r\n               LIMIT 1",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------
+[2025-02-27 16:21:37] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:21:37] [QUERY] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "duration": "1.59ms",
+    "affected_rows": 4
+}
+--------------------
+[2025-02-27 16:21:37] [SELECT] Get User Journals
+Data: {
+    "sql": "SELECT * FROM journal   \r\n                  WHERE id_user = ?   \r\n                  ORDER BY COALESCE(update_at, create_at) DESC   \r\n                  LIMIT 5 OFFSET 0",
+    "params": [
+        1
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2025-02-27 16:21:37] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:21:37] [QUERY] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "duration": "1.07ms",
+    "affected_rows": 0
+}
+--------------------
+[2025-02-27 16:21:37] [SELECT] Get Latest Articles
+Data: {
+    "sql": "SELECT * FROM artikel \r\n                  ORDER BY COALESCE(update_at, create_at) DESC \r\n                  LIMIT 2",
+    "params": [],
+    "rows_returned": 0
+}
+--------------------
+[2025-02-27 16:21:40] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:21:40] [QUERY] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "duration": "17.13ms",
+    "affected_rows": 4
+}
+--------------------
+[2025-02-27 16:21:40] [SELECT] Get User Journals with Pagination
+Data: {
+    "sql": "SELECT   \r\n        id_journal,   \r\n        judul,   \r\n        isi,   \r\n        mood,   \r\n        create_at  \r\n    FROM journal   \r\n    WHERE id_user = ?   \r\n    ORDER BY COALESCE(update_at, create_at) DESC  \r\n    LIMIT ? OFFSET ?",
+    "params": [
+        1,
+        5,
+        0
+    ],
+    "rows_returned": 4
+}
+--------------------
+[2025-02-27 16:21:40] [DATABASE] Database connection established successfully
+--------------------
+[2025-02-27 16:21:40] [QUERY] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "duration": "14.99ms",
+    "affected_rows": 1
+}
+--------------------
+[2025-02-27 16:21:40] [SELECT] Count Total Journals
+Data: {
+    "sql": "SELECT COUNT(*) as total   \r\n        FROM journal   \r\n        WHERE id_user = ?",
+    "params": [
+        1
+    ],
+    "rows_returned": 1
+}
+--------------------

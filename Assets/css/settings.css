@@ -1,0 +1,545 @@
+html {  
+    zoom: 1; /* Sesuaikan nilai zoom sesuai kebutuhan */  
+    min-height: 100vh;  
+}  
+            * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+            font-family: 'Poppins', sans-serif;  
+        }  
+        body {  
+        
+            background: #FFE4D6;  
+            font-family: Arial, sans-serif;  
+          
+        }  
+
+
+        /* Sidebar Container */  
+.sidebar {  
+    width: 80px;  
+    height: 695px;  
+    background: #5B6079;  
+    position: fixed;  
+    left: 25px;  
+    top: 120px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    padding-top: 150px;  
+    border-radius: 15px;  
+    gap: 40px;  
+}  
+
+/* Logo Style */  
+.logo {  
+    position: fixed;  
+    left: 10px;  
+    top: 20px;  
+    color: #000;  
+    -webkit-text-stroke: 4px #000;  
+    text-stroke: 4px #000;  
+    -webkit-text-stroke-color: #000;  
+    font-family: "Sankofa Display";  
+    font-size: 60px;  
+    font-weight: 400;  
+    z-index: 1000;  
+}  
+
+/* Navigation Items */  
+.nav-item {  
+    width: 44px;  
+    height: 44px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    cursor: pointer;  
+    color: white;  
+    font-size: 20px;  
+    transition: all 0.3s ease;  
+    margin-bottom: 10px;  
+}  
+
+.nav-item i {  
+    color: white;  
+    font-size: 24px;  
+}  
+
+/* Active Navigation Item */  
+.nav-item.active {  
+    background: rgba(245, 245, 245, 0.55);  
+    border-radius: 11px;  
+    color: #5B6079;  
+}  
+
+.nav-item.active i {  
+    color: #5B6079;  
+}  
+
+/* Divider Line */  
+.nav-divider {  
+    width: 40px;  
+    height: 1px;  
+    background: rgba(255, 255, 255, 0.2);  
+    margin: 10px 0;  
+}  
+   /* siderbar end */
+   body {  
+    margin: 0;  
+    padding: 0;  
+    background: #FFE4D6;  
+    font-family: Arial, sans-serif;  
+}  
+
+.page-title {  
+    text-align: center;  
+    font-size: 40px;  
+    font-weight: 800;  
+    margin: 40px 0;  
+    color: #000;  
+}  
+
+.settings-container {  
+    max-width: 800px;  
+    margin: 50px auto;  
+    background: #B4B88D;  
+    padding: 40px;  
+    border-radius: 30px;  
+    position: relative;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+    
+    /* Tambahan hiasan */  
+    border: 3px dashed rgba(255, 255, 255, 0.6);  
+}  
+
+
+/* Tambahkan corner decorations */  
+.corner {  
+    position: absolute;  
+    width: 30px;  
+    height: 30px;  
+    border: 3px solid #856789;  
+}  
+
+.corner-top-left {  
+    top: -5px;  
+    left: -5px;  
+    border-right: none;  
+    border-bottom: none;  
+    border-radius: 10px 0 0 0;  
+}  
+
+.corner-top-right {  
+    top: -5px;  
+    right: -5px;  
+    border-left: none;  
+    border-bottom: none;  
+    border-radius: 0 10px 0 0;  
+}  
+
+.corner-bottom-left {  
+    bottom: -5px;  
+    left: -5px;  
+    border-right: none;  
+    border-top: none;  
+    border-radius: 0 0 0 10px;  
+}  
+
+.corner-bottom-right {  
+    bottom: -5px;  
+    right: -5px;  
+    border-left: none;  
+    border-top: none;  
+    border-radius: 0 0 10px 0;  
+}  
+
+
+
+/* Tambahkan dot decorations */  
+.dot {  
+    position: absolute;  
+    width: 10px;  
+    height: 10px;  
+    background: #856789;  
+    border-radius: 50%;  
+    box-shadow: 0 0 10px rgba(133, 103, 137, 0.5);  
+}  
+
+.dot-1 { top: 20px; left: 50%; }  
+.dot-2 { bottom: 20px; left: 50%; }  
+.dot-3 { left: 20px; top: 50%; }  
+.dot-4 { right: 20px; top: 50%; }  
+
+.profile-pic {  
+    width: 150px;  
+    height: 150px;  
+    background: #fff;  
+    border-radius: 50%;  
+    margin: 0 auto 50px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    border: 7px solid black;  
+    overflow: hidden;  
+}  
+
+.profile-pic img {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+}  
+
+.form-group {  
+    margin-bottom: 30px;  
+    border-bottom: 2px solid #fff;  
+    padding-bottom: 10px;  
+}  
+
+.form-group label {  
+    display: inline-block;  
+    width: 180px;  
+    color: #fff;  
+    font-size: 20px;  
+    font-weight: 600;  
+}  
+
+.form-group .colon {  
+    display: inline-block;  
+    width: 30px;  
+    color: #fff;  
+    font-size: 20px;  
+    font-weight: 600;  
+}  
+
+.form-group input {  
+    width: calc(100% - 220px);  
+    background: transparent;  
+    border: none;  
+    color: #fff;  
+    font-size: 20px;  
+    padding: 5px 0;  
+}  
+
+.button-group {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-top: 60px;  
+    padding: 0 20px;  
+}  
+
+.btn {  
+    padding: 12px 30px;  
+    border-radius: 15px;  
+    border: none;  
+    color: white;  
+    cursor: pointer;  
+    font-size: 18px;  
+    font-weight: 600;  
+    display: flex;  
+    align-items: center;  
+    gap: 10px;  
+    transition: all 0.3s ease;  
+}  
+
+.btn-logout {  
+    background: #9E6868;  
+}  
+
+.btn-password {  
+    background: #6B728E;  
+    padding: 12px 40px;  
+}  
+
+.btn-edit {  
+    background: #856789;  
+}  
+
+input[type="date"]::-webkit-calendar-picker-indicator {  
+    filter: invert(1);  
+}
+
+.form-group input:focus {  
+    outline: none;  
+    box-shadow: none;  
+    border: none;  
+     
+}  
+
+
+.Navigation-moju {  
+    display: none;  
+}  
+/* Tablet (Portrait) */  
+@media screen and (max-width: 1000px) {  
+    body {  
+        min-height: 100vh;  
+        display: flex;  
+        flex-direction: column;  
+        align-items: center;  
+        justify-content: center;  
+    }  
+
+    .sidebar, .logo {  
+        display: none;  
+    }  
+    
+    .settings-container {  
+        width: 90%;  
+        max-width: 600px;  
+        margin: 0 auto;  
+        padding: 30px 20px;  
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);  
+    }  
+
+    .page-title {  
+        font-size: 32px;  
+        margin: 0 0 30px 0;  
+        position: relative;  
+    }  
+
+    .button-group {  
+        flex-wrap: wrap;  
+        gap: 15px;  
+        justify-content: center;  
+        padding: 0;  
+    }  
+
+    .btn {  
+        min-width: 200px;  
+        justify-content: center;  
+    }  
+
+
+    .Navigation-moju{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 98;
+    /* width: 400px;
+    height: 60px; */
+    min-height: 61px;
+    background: #5B6079;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+}
+
+
+.Navigation-moju ul{
+    display: flex;
+    /* width: 350px; */
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    width:90%;
+    
+
+}
+
+.Navigation-moju ul li {
+    list-style:none;
+    position: relative;
+    width: 70px;
+    height:60px ;
+    z-index: 2;
+   
+    /* background-color: aqua; */
+/* margin: 0 10px; */
+ 
+
+
+}
+
+
+
+
+.Navigation-moju ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.Navigation-moju ul li a .icon-moju{
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-size: 1.5em;
+    transition: 0.5s ;
+    color: #fff; 
+
+}
+
+.Navigation-moju ul li.active a .icon-moju{
+
+transform:translateY(-32px) ;
+/* color: #2196f3; */
+
+}
+
+.Navigation-moju ul li a .text{
+    position: absolute;
+    background: #D2809C;
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(15px);
+   top:30px;
+}
+
+.Navigation-moju ul li.active a .text{
+    transform: translateY(-4px);
+    opacity: 1;
+
+
+}
+
+.indikator-moju{
+    position: absolute;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+      background: #5B6079;  
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.indikator-moju::before{
+    content: ' ';
+    position: absolute;
+    top: 5px;
+    left: -27px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 18px #5B6079;
+}
+
+.indikator-moju::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -15px 18px #5B6079;
+}
+
+}  
+
+/* Mobile */  
+@media screen and (max-width: 768px) {  
+    .settings-container {  
+        width: 85%;  
+        padding: 25px 20px;  
+        margin: 0 auto;  
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);  
+    }  
+
+    .profile-pic {  
+        width: 120px;  
+        height: 120px;  
+        margin-bottom: 30px;  
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+    }  
+    .page-title {  
+        font-size: 28px;  
+    }  
+
+    .form-group {  
+        margin-bottom: 20px;  
+    }  
+
+    .form-group label {  
+        display: block;  
+        width: 100%;  
+        margin-bottom: 5px;  
+        font-size: 16px;  
+    }  
+
+    .form-group .colon {  
+        display: none;  
+    }  
+
+    .form-group input {  
+        width: 100%;  
+        font-size: 16px;  
+        padding: 8px 0;  
+    }  
+
+    .button-group {  
+        flex-direction: column;  
+        gap: 10px;  
+        margin-top: 30px;  
+    }  
+
+    .btn {  
+        width: 100%;  
+        padding: 12px 20px;  
+        font-size: 16px;  
+    }  
+}  
+
+/* Small Mobile */  
+@media screen and (max-width: 480px) {  
+    .page-title {  
+        font-size: 24px;  
+    }  
+
+    .profile-pic {  
+        width: 100px;  
+        height: 100px;  
+    }  
+
+    .settings-container {  
+        width: 90%;  
+        padding: 20px 15px;  
+        margin: 0 auto;  
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);  
+    }  
+
+    .form-group label {  
+        font-size: 14px;  
+    }  
+
+    .form-group input {  
+        font-size: 14px;  
+    }  
+
+    .btn {  
+        font-size: 14px;  
+        padding: 10px 15px;  
+    }  
+}  
+
+/* Fix untuk input date di mobile */  
+@media screen and (max-width: 768px) {  
+    input[type="date"] {  
+        -webkit-appearance: none;  
+        appearance: none;  
+        padding-right: 25px;  
+    }  
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {  
+        position: absolute;  
+        right: 0;  
+        padding-right: 10px;  
+    }  
+}  

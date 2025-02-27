@@ -1,0 +1,332 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: 'Poppins', sans-serif;  
+}  
+
+body {  
+    background: #FFDAB9;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100vh;  
+    padding: 20px;  
+}  
+
+.outer-container {  
+    position: relative;  
+    width: 1212px;  
+    height: 778px;  
+    margin: 0 20px;  
+    max-width: 100%;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+.Registrasi-container {  
+    width: 100%;  
+    height: 100%;  
+    border-radius: 25px;  
+    border: 4px solid #595656;  
+    background: #E9E9E9;  
+    filter: blur(2px);  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    z-index: 1;  
+    flex-shrink: 0;  
+    overflow: hidden;  
+}  
+
+.gambar-ilustrasi {  
+    position: absolute;  
+    left: 0;  
+    top: 50%;  
+    transform: translateY(-45%);  
+    width: 50%;  
+    height: 100%;  
+    z-index: 2;  
+    display: flex;  
+    align-items: center;  
+    padding-left: 40px;  
+}  
+
+.gambar-ilustrasi img {  
+    width: 100%;  
+    height: auto;  
+    object-fit: contain;  
+    max-height: 80%;  
+}  
+
+.Registrasi-card {  
+    position: relative;  
+    width: 45%;  
+    height: 755px;  
+    border-radius: 25px;  
+    background: #FFF;  
+    display: flex;  
+    right: -48px;  
+    overflow: hidden;  
+    z-index: 2;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    margin-left: auto;  
+    margin-right: 5%;  
+}  
+
+.logo {  
+    text-align: center;  
+    font-family: "Sankofa Display", sans-serif;  
+    font-size: 96px;  
+    font-style: normal;  
+    font-weight: 400;  
+    line-height: normal;  
+    color: #000;  
+    -webkit-text-stroke: 5px #000;  
+    text-stroke: 5px #000;  
+    margin-bottom: 30px;  
+}  
+
+.forgot-form {  
+    position: relative;  
+    top: -30px;  
+    width: 100%;  
+    padding: 60px;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100%;  
+    gap: 15px;  
+}  
+
+.forgot-title {  
+    font-size: 32px;  
+    font-weight: 600;  
+    margin-bottom: 10px;  
+}  
+
+.forgot-subtitle {  
+    text-align: center;  
+    color: #666;  
+    font-size: 14px;  
+    margin-bottom: 30px;  
+    max-width: 300px;  
+}  
+
+.input-email {  
+    width: 87%;  
+    max-width: 450px;  
+    position: relative;  
+}  
+
+.input-email input {  
+    width: 100%;  
+    padding: 15px 45px;  
+    border: 3px solid #000;  
+    border-radius: 18px;  
+    font-size: 16px;  
+    height: 55px;  
+}  
+
+.input-email i {  
+    position: absolute;  
+    left: 15px;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    color: #000;  
+    font-size: 20px;  
+}  
+
+.Registrasi-link {  
+    color: #7E7C7C;  
+    text-decoration: none;  
+    font-size: 15px;  
+    font-weight: 500;  
+    margin-top: 10px;  
+}  
+
+.send-link-btn {
+    width: 180px;
+    max-width: 450px;
+    padding: 5px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin: 10px 40px;
+}
+
+.send-link-btn:hover {  
+    background: #333;  
+}  
+@media screen and (max-width: 1024px) {  
+.outer-container {  
+width: 100%;  
+height: auto;  
+padding: 10px;  
+margin: 0;  
+}  
+
+.Registrasi-container {  
+/*  */
+}  
+
+.gambar-ilustrasi {  
+display: none;  
+}  
+
+.Registrasi-card {  
+width: 100%;  
+height: auto;  
+right: 0;  
+margin: 0 auto;  
+min-height: 600px;  
+max-width: 800px;  
+padding: 0;  
+position: relative;  
+z-index: 2;  
+
+}  
+
+.forgot-form {  
+padding: 40px;  
+top: 0;  
+width: 100%;  
+max-width: 700px;  
+margin: 0 auto;  
+gap: 20px;  
+}  
+
+
+
+.logo {  
+font-size: 80px;  
+-webkit-text-stroke: 3px #000;  
+text-stroke: 3px #000;  
+margin-bottom: 20px;  
+}  
+
+.forgot-title {  
+font-size: 30px;  
+margin-bottom: 5px;  
+}  
+
+.forgot-subtitle {  
+font-size: 15px;  
+max-width: 400px;  
+margin-bottom: 20px;  
+}  
+
+.input-email {  
+width: 100%;  
+max-width: 700px;  
+}  
+
+.input-email input {  
+height: 55px;  
+font-size: 16px;  
+}  
+
+
+.Registrasi-link {  
+font-size: 15px;  
+margin-top: 15px;  
+}  
+}  
+
+
+@media screen and (max-width: 768px) {  
+.Registrasi-container {  
+border-width: 3px;  
+}  
+
+.Registrasi-card {  
+width: 95%;  
+}  
+
+.forgot-form {  
+padding: 30px 25px;  
+}  
+
+.forgot-title {  
+font-size: 28px;  
+}  
+
+.forgot-subtitle {  
+font-size: 14px;  
+}  
+.form-container {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    position: relative;
+    right: 0px;
+    left: -4px;
+}  
+.send-link-btn{
+    position: relative;
+    right: -10px;
+}
+
+}  
+
+@media screen and (max-width: 480px) {  
+.Registrasi-container {  
+border-width: 2px;  
+}  
+
+.Registrasi-card {  
+width: 100%;  
+}  
+
+.forgot-form {  
+padding: 25px 20px;  
+}  
+
+.logo {  
+font-size: 64px;  
+-webkit-text-stroke: 2px #000;  
+text-stroke: 2px #000;  
+}  
+
+.forgot-title {  
+font-size: 26px;  
+}  
+
+.forgot-subtitle {  
+font-size: 13px;  
+max-width: 300px;  
+}  
+
+.input-email input {  
+height: 50px;  
+font-size: 15px;  
+padding: 12px 40px;  
+}  
+
+.input-email i {  
+font-size: 18px;  
+}  
+.send-link-btn{
+    font-size: 12px;;
+}
+
+.send-link-btn {  
+    margin: 5px 60px;
+height: 30px;  
+font-weight: 700;
+padding: 5px 5px 5px 5px;
+width: 50%;
+}  
+
+.Registrasi-link {  
+font-size: 14px;  
+}  
+}

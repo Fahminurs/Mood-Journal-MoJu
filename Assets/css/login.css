@@ -1,0 +1,315 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: 'Poppins', sans-serif;  
+}  
+
+body {  
+    background: #FFDAB9;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100vh;  
+    padding: 20px;  
+}  
+
+.outer-container {  
+    position: relative;  
+    width: 1212px;  
+    height: 778px;  
+    margin: 0 20px;  
+    max-width: 100%;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+.login-container {  
+    width: 100%;  
+    height: 100%;  
+    border-radius: 25px;  
+    border: 4px solid #595656;  
+    background: #E9E9E9;  
+    filter: blur(2px);  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    z-index: 1;  
+    flex-shrink: 0;  
+    overflow: hidden;  
+}  
+
+.gambar-ilustrasi {  
+    position: absolute;  
+    left: 0;  
+    top: 50%;  
+    transform: translateY(-45%);  
+    width: 50%;  
+    height: 100%;  
+    z-index: 2;  
+    display: flex;  
+    align-items: center;  
+    padding-left: 40px;  
+}  
+
+.gambar-ilustrasi img {  
+    width: 100%;  
+    height: auto;  
+    object-fit: contain;  
+    max-height: 80%;  
+}  
+
+.login-card {  
+    position: relative;  
+    width: 45%;  
+    height: 755px;  
+    border-radius: 25px;  
+    background: #FFF;  
+    display: flex;  
+    right: -48px;  
+    overflow: hidden;  
+    z-index: 2;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    margin-left: auto;  
+    margin-right: 5%;  
+}  
+
+.login-form {  
+    position: relative;  
+    top: -30px;  
+    width: 100%;  
+    padding: 60px;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100%;  
+    gap: 10px;  
+}  
+
+.logo {  
+    text-align: center;  
+    font-family: "Sankofa Display", sans-serif;  
+    font-size: 96px;  
+    font-weight: 400;  
+    color: #000;  
+    -webkit-text-stroke: 5px #000;  
+    text-stroke: 5px #000;  
+    margin-bottom: 30px;  
+}  
+
+h2 {  
+    text-align: center;  
+    font-size: 24px;  
+    margin-bottom: 10px;  
+}  
+
+.subtitle {  
+    text-align: center;  
+    color: #666;  
+    font-size: 14px;  
+    margin-bottom: 40px;  
+}  
+
+.input-group {  
+    margin-bottom: 20px;  
+    position: relative;  
+    width: 87%;  
+    max-width: 450px;  
+}  
+
+.input-group input {  
+    width: 100%;  
+    padding: 15px 45px;  
+    border: 3px solid #000;  
+    border-radius: 18px;  
+    font-size: 16px;  
+    height: 66px;  
+}  
+
+.input-group input[type="password"] {  
+    padding-right: 45px;  
+}  
+
+.input-group .toggle-password {  
+    position: absolute;  
+    right: 15px;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    cursor: pointer;  
+    color: #000;  
+}  
+
+.input-group i.fa-at,  
+.input-group i.fa-lock {  
+    font-size: 24px;  
+    position: absolute;  
+    left: 15px;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    color: #000;  
+}  
+
+.input-group i.fa-eye, i.fa-eye-slash{
+    font-size: 24px;  
+}
+
+.links {  
+    display: flex;  
+    justify-content: space-between;  
+    position: relative;  
+    top: -20px;  
+    margin-bottom: 30px;  
+}  
+
+.links a {  
+    color: #7E7C7C;  
+    text-decoration: none;  
+    font-size: 15px;  
+    font-weight: 700;  
+    margin: 0 50px;
+}  
+
+button {  
+    width: 60%;  
+    padding: 10px 15px;  
+    background: #000;  
+    color: white;  
+    border: none;  
+    border-radius: 25px;  
+    cursor: pointer;  
+    font-size: 20px;  
+    font-weight: 700;  
+}  
+
+button:hover {  
+    background: #333;  
+}  
+@media screen and (max-width: 1024px) {  
+.outer-container {  
+width: 100%;  
+height: auto;  
+padding: 10px;  
+margin: 0;  
+}  
+
+.login-container {  
+/* display: none;   */
+}  
+
+.gambar-ilustrasi {  
+display: none;  
+}  
+
+.login-card {  
+width: 100%;  
+height: auto;  
+right: 0;  
+margin: 0 auto; /* Center the card */  
+min-height: 600px;  
+max-width: 800px; /* Increased max-width */  
+padding: 0;  
+}  
+
+.login-form {  
+padding: 40px;  
+top: 0;  
+width: 100%;  
+max-width: 700px; /* Increased max-width for form content */  
+margin: 0 auto;  
+}  
+
+.logo {  
+font-size: 80px;  
+-webkit-text-stroke: 3px #000;  
+text-stroke: 3px #000;  
+margin-bottom: 25px;  
+}  
+
+.input-group {  
+width: 100%;  
+max-width: 700px; /* Increased max-width */  
+margin: 0 auto 20px;  
+}  
+
+.input-group input {  
+height: 55px;  
+font-size: 16px;  
+}  
+
+.links {  
+width: 100%;  
+justify-content: space-between;  
+max-width: 700px;  
+margin: 20px auto;  
+}  
+
+.links a {  
+margin: 0 20px;  
+font-size: 15px;  
+}  
+
+button {  
+width: 100%;  
+max-width: 700px;  
+height: 55px;  
+margin: 0 auto;  
+font-size: 20px;  
+font-weight: 700;
+}  
+}  
+
+@media screen and (max-width: 768px) {  
+.login-card {  
+width: 95%;  
+}  
+
+.login-form {  
+padding: 30px 25px;  
+}  
+
+.input-group input {  
+height: 52px;  
+}  
+}  
+
+@media screen and (max-width: 480px) {  
+.login-card {  
+width: 100%;  
+}  
+
+.login-form {  
+padding: 25px 20px;  
+}  
+
+.logo {  
+font-size: 64px;  
+-webkit-text-stroke: 2px #000;  
+text-stroke: 2px #000;  
+}  
+
+h2 {  
+font-size: 22px;  
+}  
+
+.subtitle {  
+font-size: 14px;  
+}  
+
+.input-group input {  
+height: 50px;  
+font-size: 15px;  
+}  
+
+.links a {  
+font-size: 13px;  
+margin: 0 10px;  
+}  
+
+button {  
+height: 50px;  
+font-size: 20px;  
+font-weight: 700;
+}  
+}

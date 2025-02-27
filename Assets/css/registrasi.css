@@ -1,0 +1,358 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: 'Poppins', sans-serif;  
+}  
+
+body {  
+    background: #FFDAB9;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100vh;  
+    padding: 20px;  
+}  
+
+.outer-container {  
+    position: relative;  
+    width: 1212px;  
+    height: 778px;  
+    margin: 0 20px;  
+    max-width: 100%;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+.Registrasi-container {  
+    width: 100%;  
+    height: 100%;  
+    border-radius: 25px;  
+    border: 4px solid #595656;  
+    background: #E9E9E9;  
+    filter: blur(2px);  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    z-index: 1;  
+    flex-shrink: 0;  
+    overflow: hidden;  
+}  
+
+.gambar-ilustrasi {  
+    position: absolute;  
+    left: 0;  
+    top: 50%;  
+    transform: translateY(-45%);  
+    width: 50%;  
+    height: 100%;  
+    z-index: 2;  
+    display: flex;  
+    align-items: center;  
+    padding-left: 40px;  
+}  
+
+.gambar-ilustrasi img {  
+    width: 100%;  
+    height: auto;  
+    object-fit: contain;  
+    max-height: 80%;  
+}  
+
+.Registrasi-card {  
+    position: relative;  
+    width: 45%;  
+    height: 755px;  
+    border-radius: 25px;  
+    background: #FFF;  
+    display: flex;  
+    right: -48px;  
+    overflow: hidden;  
+    z-index: 2;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    margin-left: auto;  
+    margin-right: 5%;  
+}  
+
+.Registrasi-form {  
+    position: relative;  
+    top: -30px;  
+    width: 100%;  
+    padding: 60px;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100%;  
+    gap: 15px;  
+}  
+
+.logo {  
+    text-align: center;  
+    font-family: "Sankofa Display", sans-serif;  
+    font-size: 96px;  
+    font-style: normal;  
+    font-weight: 400;  
+    line-height: normal;  
+    color: #000;  
+    -webkit-text-stroke: 5px #000;  
+    text-stroke: 5px #000;  
+    margin-bottom: 20px;  
+}  
+
+h2 {  
+    text-align: center;  
+    font-size: 24px;  
+    margin-bottom: 5px;  
+}  
+
+.subtitle {  
+    text-align: center;  
+    color: #666;  
+    font-size: 14px;  
+    margin-bottom: 20px;  
+}  
+
+.input-group {  
+    margin-bottom: 15px;  
+    position: relative;  
+    width: 87%;  
+    max-width: 450px;  
+}  
+
+.input-group input {  
+    width: 100%;  
+    padding: 15px 45px;  
+    border: 3px solid #000;  
+    border-radius: 18px;  
+    font-size: 16px;  
+    height: 55px;  
+}  
+
+.input-group input[type="date"] {  
+    padding-right: 15px;  
+}  
+
+.input-group input[type="password"] {  
+    padding-right: 45px;  
+}  
+
+.input-group i {  
+    font-size: 20px;  
+    position: absolute;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    color: #000;  
+}  
+
+.input-group i:not(.toggle-password, .toggle-confirm-password) {  
+    left: 15px;  
+}  
+
+.toggle-password, .toggle-confirm-password {  
+    position: absolute;     
+    right: 15px;  
+    cursor: pointer;  
+}  
+
+.links {  
+    text-align: center;  
+    margin-top: 10px;  
+}  
+
+.links a {  
+    color: #7E7C7C;  
+    text-decoration: none;  
+    font-size: 12px;  
+    font-weight: 700;  
+}  
+
+button {  
+    width: 87%;  
+    max-width: 450px;  
+    padding: 10px;  
+    background: #000;  
+    color: white;  
+    border: none;  
+    border-radius: 25px;  
+    cursor: pointer;  
+    font-size: 20px;  
+    font-weight: 700; 
+    margin-top: 10px;  
+}  
+
+button:hover {  
+    background: #333;  
+}  
+
+/* Tambahkan CSS baru ini */  
+.form-row {  
+display: flex;  
+justify-content: space-between;  
+width: 87%;  
+max-width: 450px;  
+gap: 15px;  
+}  
+
+
+.input-group {  
+margin-bottom: 15px;  
+position: relative;  
+width: 100%; /* Ubah dari 87% */  
+}  
+
+.input-group.full-width {  
+width: 87%;  
+max-width: 450px;  
+}  
+
+/* Sesuaikan ukuran input untuk kolom */  
+.form-row .input-group input {  
+width: 100%;  
+/* padding: 15px 45px;   */
+border: 3px solid #000;  
+border-radius: 18px;  
+font-size: 16px;  
+height: 55px;  
+}
+.input-group input[type="date"]::-webkit-calendar-picker-indicator {  
+opacity: 0;  
+width: 100%;  
+height: 100%;  
+position: absolute;  
+left: 0;  
+top: 0;  
+cursor: pointer;  
+}  
+
+.input-group input[type="date"] {  
+width: 100%;  
+padding: 0 10px 0 35px;
+color: #000;  
+
+}  
+
+
+
+/* .input-group input[type="date"] {  
+color: transparent;  
+position: relative;  
+}   */
+
+.input-group input[type="date"]::placeholder {  
+color: #666;  
+}  
+
+/* Optional: Jika ingin menampilkan placeholder */  
+.input-group input[type="date"]:focus {  
+color: #000;  
+}  
+
+@media screen and (max-width: 1024px) {  
+.outer-container {  
+width: 100%;  
+height: auto;  
+padding: 10px;  
+margin: 0;  
+}  
+
+.Registrasi-container {  
+/*  */
+}  
+
+.gambar-ilustrasi {  
+display: none;  
+}  
+
+.Registrasi-card {  
+width: 100%;  
+height: auto;  
+right: 0;  
+margin: 0;  
+min-height: 600px;  
+max-width: 800px;  
+}  
+
+.Registrasi-form {  
+padding: 40px;  
+top: 0;  
+gap: 15px;  
+width: 100%;  
+}  
+
+.logo {  
+font-size: 80px;  
+margin-bottom: 20px;  
+}  
+
+/* Tetap mempertahankan layout row */  
+.form-row {  
+display: flex;  
+flex-direction: row; /* Memastikan tetap horizontal */  
+width: 100%;  
+gap: 15px;  
+margin-bottom: 10px;  
+}  
+
+.input-group {  
+flex: 1; /* Membagi ruang secara merata */  
+min-width: 0; /* Mencegah overflow */  
+}  
+
+.input-group.full-width {  
+width: 100%;  
+}  
+
+.input-group input {  
+width: 100%;  
+height: 55px;  
+font-size: 15px;  
+padding: 10px 35px;  
+}  
+
+button {  
+width: 100%;  
+height: 55px; 
+font-size: 20px;  
+font-weight: 700; 
+}  
+}  
+
+@media screen and (max-width: 480px) {  
+.Registrasi-card {  
+width: 100%;  
+}  
+
+.Registrasi-form {  
+padding: 20px 15px;  
+}  
+
+.logo {  
+font-size: 64px;  
+}  
+
+/* Menyesuaikan ukuran font dan padding untuk layar kecil */  
+.input-group input {  
+font-size: 14px;  
+padding: 8px 30px;  
+height: 50px;  
+}  
+
+.input-group i {  
+font-size: 16px;  
+}  
+
+/* Memperkecil gap antara input pada layar kecil */  
+.form-row {  
+gap: 10px;  
+}  
+}  
+
+/* Optimasi untuk input date */  
+@media screen and (max-width: 768px) {  
+.input-group input[type="date"] {  
+padding-left: 35px;  
+font-size: 14px;  
+}  
+}

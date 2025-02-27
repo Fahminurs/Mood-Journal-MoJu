@@ -1,0 +1,850 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>DataTable CRUD Example</title>  
+    
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+    
+    <!-- DataTables Bootstrap CSS -->  
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">  
+    
+    <!-- Responsive DataTables CSS -->  
+    <link href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css" rel="stylesheet">  
+    <style>  
+        /* ========== START: Font Import ========== */  
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');  
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');  
+        /* ========== END: Font Import ========== */  
+        
+        /* ========== START: Base Typography ========== */  
+        html {  
+            font-size: 16px; /* Base font size */  
+        }  
+        
+        @media (max-width: 576px) {  
+            html {  
+                font-size: 14px; /* Lebih kecil untuk smartphone */  
+            }  
+        }  
+        /* ========== END: Base Typography ========== */  
+        
+        /* ========== START: DataTables Pagination Base Styling ========== */  
+        .dataTables_wrapper .pagination {  
+            margin: 0;  
+            display: flex;  
+            align-items: center;  
+            scale: 0.8; /* Mengecilkan ukuran keseluruhan */  
+            transform-origin: right center;  
+        }  
+        
+        .dataTables_wrapper .pagination > li.page-item {  
+            margin: 0 2px;  
+        }  
+        
+        .dataTables_wrapper .pagination > li > a.page-link {  
+            padding: 0.20rem 0.4rem;  
+            font-size: 0.7rem;  
+            line-height: 1.2;  
+            color: #007bff;  
+            border-radius: 0.2rem;  
+        }  
+        
+        .dataTables_wrapper .pagination > li.active > a.page-link {  
+            background-color: #007bff;  
+            color: #fff;  
+            border-color: #007bff;  
+        }  
+        
+        .dataTables_paginate .page-link {  
+            padding: 0.20rem 0.4rem;  
+            font-size: 0.7rem;  
+            line-height: 1.2;  
+        }  
+        
+        .dataTables_paginate .page-item.active .page-link {  
+            background-color: #007bff;  
+            color: white;  
+        }  
+        /* ========== END: DataTables Pagination Base Styling ========== */  
+        
+        /* ========== START: Pagination Focus & Hover States ========== */  
+        .dataTables_wrapper .pagination > li > .page-link:focus {  
+            outline: none; /* Hapus outline default */  
+            box-shadow: none; /* Efek shadow fokus */  
+        }  
+        /* ========== END: Pagination Focus & Hover States ========== */  
+        
+        /* ========== START: Responsive DataTable Control Styling ========== */  
+        table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,  
+        table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {  
+            content: "+";  
+            font-family: 'Poppins', sans-serif;  
+            font-size: 12px;  
+            font-weight: 600;  
+            
+            display: block;  
+            position: absolute;  
+            top: 75%;  
+            left: 5px;   
+            transform: translateY(-50%);  
+            
+            height: 1.5em;  
+            width: 1.5em;  
+            line-height: 1.5em;  
+            
+            background-color: #0d6efd;  
+            color: white;  
+            
+            border-radius: 5px;  
+            
+            text-align: center;  
+            text-indent: 0 !important;  
+            
+            box-shadow:   
+                0 4px 6px rgba(0, 0, 0, 0.1),   
+                0 1px 3px rgba(0, 0, 0, 0.08);  
+            
+            transition:   
+                background-color 0.3s ease,  
+                transform 0.2s ease;  
+        }  
+        
+        table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:hover:before,  
+        table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:hover:before {  
+            background-color: #0b5ed7;  
+            transform: translateY(-50%) scale(1.1);  
+        }  
+        
+        table.dataTable.dtr-inline.collapsed > tbody > tr.shown > td.dtr-control:before,  
+        table.dataTable.dtr-inline.collapsed > tbody > tr.shown > th.dtr-control:before {  
+            content: "−";  
+            background-color: #dc3545;  
+        }  
+        /* ========== END: Responsive DataTable Control Styling ========== */  
+        
+        /* ========== START: Modal Styling ========== */  
+        .modal-content-moju {  
+            font-family: 'Poppins', sans-serif;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+        }  
+        
+        .header-moju {  
+            font-family: 'Poppins', sans-serif;  
+            font-weight: 600;  
+            line-height: 1.5;  
+            font-size: 1rem;  
+            color: #333;  
+        }  
+        
+        .modal-header-moju {  
+            display: flex;  
+            align-items: center;  
+            padding: 1rem;  
+            border-bottom: 1px solid #e9ecef;  
+            font-family: 'Poppins', sans-serif;  
+        }  
+        
+        .modal-body-moju {  
+            font-family: 'Poppins', sans-serif;  
+            line-height: 1.6;  
+            padding: 1rem;  
+        }  
+        
+        .table-moju {  
+            width: 100%;  
+            margin-bottom: 0;  
+            font-family: 'Poppins', sans-serif;  
+            line-height: 1.5;  
+        }  
+        
+        .table-moju th,  
+        .table-moju td {  
+            padding: 0.75rem;  
+            vertical-align: middle;  
+            border: 1px solid #dee2e6;  
+            font-family: 'Poppins', sans-serif;  
+        }  
+        
+        .table-moju th {  
+            background-color: #f8f9fa;  
+            font-weight: 600;  
+        }  
+        
+        .detail-moju {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            font-family: 'Poppins', sans-serif;  
+            padding: 0.5rem 0;  
+        }  
+        
+        .column-moju {  
+            font-weight: 600;  
+            margin-right: 10px;  
+            color: #495057;  
+        }  
+        
+        .value-moju {  
+            color: #212529;  
+            flex-grow: 1;  
+            text-align: right;  
+        }  
+        /* ========== END: Modal Styling ========== */  
+        
+        /* ========== START: Pagination Layout ========== */  
+        .dataTables_wrapper .col-sm-12.col-md-7 {  
+            display: flex;  
+            justify-content: flex-end;  
+            align-items: center;  
+        }  
+        
+        .dataTables_paginate {  
+            margin-left: auto;  
+            display: flex;  
+            justify-content: flex-end;  
+        }  
+        
+        .dataTables_paginate .pagination {  
+            margin: 0;  
+            scale: 1;  
+            transform-origin: right center;  
+        }  
+        /* ========== END: Pagination Layout ========== */  
+        
+        /* ========== START: Utility Classes ========== */  
+        .text-truncate-custom {  
+            max-width: 150px;  
+            white-space: nowrap;  
+            overflow: hidden;  
+            text-overflow: ellipsis;  
+        }  
+        
+        .dataTables_info {  
+            display: none !important;  
+            font-size: 0.8rem;  
+        }  
+        /* ========== END: Utility Classes ========== */  
+        
+        /* ========== START: Responsive Input Styling ========== */  
+        .dataTables_length select,  
+        .dataTables_filter input {  
+            font-size: 0.8rem;  
+            padding: 0.25rem 2.5rem;  
+            font-size: 14px;
+        }  
+        /* ========== END: Responsive Input Styling ========== */  
+
+        /* ========== START: Table Header Styling with Red Focus and Hover ========== */  
+#userTable th {  
+    text-align: center !important;  
+    vertical-align: middle !important;  
+    white-space: nowrap;  
+    transition:   
+        background-color 0.3s ease,  
+        color 0.3s ease,  
+        box-shadow 0.3s ease;  
+    position: relative;  
+    cursor: pointer;  
+    background-color: #007bff;
+}  
+
+/* Base Header Styling */  
+#userTable thead {  
+    background-color: #f8f9fa;  
+    border-bottom: 2px solid #dee2e6;  
+}  
+
+/* Header Hover State */  
+#userTable th.sorting:hover {  
+    background-color: #dc3545 !important; /* Warna merah */  
+    color: white !important;  
+    box-shadow:   
+        0 4px 6px rgba(0,0,0,0.1),  
+        0 1px 3px rgba(0,0,0,0.06);  
+}  
+
+/* Header Focus State */  
+#userTable th.sorting:focus,  
+#userTable th.sorting:focus-visible {  
+    outline: none;  
+    background-color: #dc3545 !important; /* Warna merah */  
+    color: white !important;  
+    box-shadow:   
+        0 0 0 3px rgba(220,53,69,0.5), /* Efek shadow fokus */  
+        0 4px 6px rgba(0,0,0,0.1);  
+}  
+
+/* Active Sorting States */  
+#userTable th.sorting_asc,  
+#userTable th.sorting_desc {  
+    background-color: #dc3545 !important;  
+    color: white !important;  
+}  
+
+/* Styling Teks Header */  
+#userTable thead tr th {  
+    text-align: center !important;  
+    vertical-align: middle !important;  
+    padding: 0.75rem !important;  
+    color: #000000;  
+    font-weight: 600;  
+    text-transform: uppercase;  
+    letter-spacing: 0.5px;  
+}  
+
+/* Styling Ikon Sorting */  
+#userTable th.sorting::after,  
+#userTable th.sorting_asc::after,  
+#userTable th.sorting_desc::after {  
+    position: absolute;  
+    right: 10px;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    opacity: 0.7;  
+    color: white; /* Warna putih saat header merah */  
+}  
+
+/* Variasi Warna untuk Berbagai Status */  
+#userTable th.sorting_asc::after {  
+    color: black;
+}  
+
+#userTable th.sorting_desc::after {  
+    color: black;
+}  
+
+/* Efek Transisi Halus */  
+#userTable th {  
+    transition:   
+        background-color 0.3s ease,  
+        color 0.3s ease,  
+        box-shadow 0.3s ease;  
+}  
+/* ============ Rounded ===========*/
+/* Rounded pada header tabel */  
+#userTable thead tr:first-child th:first-child {  
+    border-top-left-radius: 12px;  
+   
+}  
+
+#userTable thead tr:first-child th:last-child {  
+    border-top-right-radius: 12px;  
+}  
+
+/* Rounded pada baris terakhir */  
+#userTable tbody tr:last-child td:first-child {  
+    border-bottom-left-radius: 12px;  
+}  
+
+#userTable tbody tr:last-child td:last-child {  
+    border-bottom-right-radius: 12px;  
+} 
+
+table {
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+   
+
+}
+table th {  
+    font-size: 14px;  
+    text-transform: none !important; /* Hapus uppercase */  
+    font-weight: 600; /* Tambahkan ketebalan font */  
+    letter-spacing: normal; /* Kembalikan spasi huruf normal */  
+    color: #495057; /* Warna teks */  
+}  
+
+/* Search and select input */
+div.dataTables_wrapper div.dataTables_filter input {
+
+border: 2px solid black;
+border-radius: 20px;
+padding: 0 30px;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+
+ border: 2px solid black;
+border-radius: 20px;
+padding: 3px 30px;
+}
+
+        /* ========== START: Mobile Responsive Media Queries ========== */  
+        @media (max-width: 768px) {  
+            .mobile-moju {  
+                font-size: 0.9rem;  
+            }  
+        
+            div.dataTables_wrapper div.dataTables_length,  
+            div.dataTables_wrapper div.dataTables_filter,  
+            div.dataTables_wrapper div.dataTables_info,  
+            div.dataTables_wrapper div.dataTables_paginate {  
+                text-align: center;  
+            }  
+        
+            div.dataTables_wrapper div.dataTables_paginate ul.pagination {  
+                justify-content: right !important;  
+            }  
+        }  
+        
+        @media (max-width: 576px) {  
+            .table-responsive {  
+                font-size: 0.8rem;  
+            }  
+        
+            .btn {  
+                padding: 0.25rem 0.5rem;  
+                font-size: 0.75rem;  
+            }  
+        
+            .modal-dialog {  
+                margin: 1.75rem 0.5rem;  
+                max-width: calc(100% - 1rem);  
+            }  
+        
+            #userTable th,   
+            #userTable td {  
+                padding: 0.5rem !important;  
+            }  
+        
+            .card-header {  
+                flex-direction: column;  
+                align-items: flex-start !important;  
+            }  
+        
+            .card-header .btn {  
+                margin-top: 0.5rem;  
+                width: 100%;  
+            }  
+        
+            .dataTables_wrapper .row > div {  
+                margin-bottom: 5px;  
+            }  
+        
+            .dataTables_paginate .pagination {  
+                scale: 0.7;  
+            }  
+
+        }  
+        
+        @media (max-width: 992px) {  
+            .dataTables_wrapper .row {  
+                display: flex;  
+                align-items: center;  
+                flex-wrap: nowrap;  
+                flex-direction: row;  
+                justify-content: space-between;  
+            }  
+        
+            .dataTables_wrapper .row > div {  
+                display: flex;  
+                align-items: center;  
+                flex: 1;  
+                margin-bottom: 10px;  
+            }  
+        
+            .dataTables_length,  
+            .dataTables_filter {  
+                width: 100%;  
+                display: flex;  
+                align-items: center;  
+            }  
+        
+            .dataTables_length label,  
+            .dataTables_filter label {  
+                display: flex;  
+                align-items: center;  
+                width: 100%;  
+                margin: 0;  
+            }  
+        
+            .dataTables_length select,  
+            .dataTables_filter input {  
+                margin-left: 5px;  
+                flex-grow: 1;  
+            }  
+        
+            .dataTables_wrapper .col-sm-12.col-md-5,  
+            .dataTables_wrapper .col-sm-12.col-md-7 {  
+                flex: none;  
+                width: auto;  
+            }  
+        }  
+        /* ========== END: Mobile Responsive Media Queries ========== */  
+        </style>
+</head>  
+<body>  
+    <div class="container-fluid mt-5">  
+        <div class="row">  
+            <div class="col-12">  
+                <div class="card">  
+                    <div class="card-header d-flex justify-content-between align-items-center">  
+                        <h4 class="card-title">Daftar Pengguna</h4>  
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">  
+                            <i class="fas fa-plus"></i> Tambah Pengguna  
+                        </button>  
+                    </div>  
+                    <div class="card-body">  
+                        <div class="table-responsive">  
+                            <table id="userTable" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">  
+                                <thead>  
+                                    <tr>  
+                                        <th>No</th>  
+                                        <th>Nama</th>  
+                                        <th>Email</th>  
+                                        <th>No Telepon</th>  
+                                        <th>Status</th>  
+                                        <th>Aksi</th>  
+                                    </tr>  
+                                </thead>  
+                                <tbody>  
+                                    <!-- Data akan diisi secara dinamis -->  
+                      
+                                </tbody>  
+                            </table>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <!-- Modal Tambah Pengguna -->  
+    <div class="modal fade" id="tambahModal" tabindex="-1">  
+        <div class="modal-dialog">  
+            <div class="modal-content">  
+                <div class="modal-header">  
+                    <h5 class="modal-title">Tambah Pengguna Baru</h5>  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>  
+                </div>  
+                <form id="tambahForm">  
+                    <div class="modal-body">  
+                        <div class="mb-3">  
+                            <label class="form-label">Nama Lengkap</label>  
+                            <input type="text" class="form-control" name="nama" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label class="form-label">Email</label>  
+                            <input type="email" class="form-control" name="email" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label class="form-label">No Telepon</label>  
+                            <input type="tel" class="form-control" name="telepon" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label class="form-label">Status</label>  
+                            <select class="form-select" name="status" required>  
+                                <option value="aktif">Aktif</option>  
+                                <option value="nonaktif">Nonaktif</option>  
+                            </select>  
+                        </div>  
+                    </div>  
+                    <div class="modal-footer">  
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>  
+                        <button type="submit" class="btn btn-primary">Simpan</button>  
+                    </div>  
+                </form>  
+            </div>  
+        </div>  
+    </div>  
+
+    <!-- Modal Edit Pengguna -->  
+    <div class="modal fade" id="editModal" tabindex="-1">  
+        <div class="modal-dialog">  
+            <div class="modal-content">  
+                <div class="modal-header">  
+                    <h5 class="modal-title">Edit Pengguna</h5>  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>  
+                </div>  
+                <form id="editForm">  
+                    <input type="hidden" name="id" id="editId">  
+                    <div class="modal-body">  
+                        <div class="mb-3">  
+                            <label class="form-label">Nama Lengkap</label>  
+                            <input type="text" class="form-control" name="nama" id="editNama" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label class="form-label">Email</label>  
+                            <input type="email" class="form-control" name="email" id="editEmail" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label class="form-label">No Telepon</label>  
+                            <input type="tel" class="form-control" name="telepon" id="editTelepon" required>  
+                        </div>  
+                        <div class="mb-3">  
+                            <label class="form-label">Status</label>  
+                            <select class="form-select" name="status" id="editStatus" required>  
+                                <option value="aktif">Aktif</option>  
+                                <option value="nonaktif">Nonaktif</option>  
+                            </select>  
+                        </div>  
+                    </div>  
+                    <div class="modal-footer">  
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>  
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>  
+                    </div>  
+                </form>  
+            </div>  
+        </div>  
+    </div>  
+
+    <!-- Bootstrap JS -->  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+    
+    <!-- jQuery -->  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    
+    <!-- DataTables JS -->  
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>  
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>  
+    
+    <!-- Responsive DataTables JS -->  
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>  
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>  
+
+    <!-- Font Awesome untuk icon -->  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  
+ 
+
+    <script>  
+  $(document).ready(function() {  
+    // Data Statis  
+    const staticData = [  
+        {  
+            id: 1,  
+            nama: "John Doe",  
+            email: "john.doe@example.com",  
+            telepon: "081234567890",  
+            status: "aktif"  
+        },  
+        {  
+            id: 2,  
+            nama: "Jane Smith",  
+            email: "jane.smith@example.com",  
+            telepon: "082345678901",  
+            status: "nonaktif"  
+        },  
+        {  
+            id: 2,  
+            nama: "Jane Smith",  
+            email: "jane.smith@example.com",  
+            telepon: "082345678901",  
+            status: "nonaktif"  
+        },  
+        {  
+            id: 2,  
+            nama: "Jane Smith",  
+            email: "jane.smith@example.com",  
+            telepon: "082345678901",  
+            status: "nonaktif"  
+        },  
+        {  
+            id: 2,  
+            nama: "Jane Smith",  
+            email: "jane.smith@example.com",  
+            telepon: "082345678901",  
+            status: "nonaktif"  
+        },  
+        {  
+            id: 2,  
+            nama: "Jane Smith",  
+            email: "jane.smith@example.com",  
+            telepon: "082345678901",  
+            status: "nonaktif"  
+        },  
+        {  
+            id: 2,  
+            nama: "Jane Smith",  
+            email: "jane.smith@example.com",  
+            telepon: "082345678901",  
+            status: "nonaktif"  
+        },  
+        {  
+            id: 3,  
+            nama: "Mike Johnson",  
+            email: "mike.johnson@example.com",  
+            telepon: "083456789012",  
+            status: "aktif"  
+        }  
+    ];  
+
+    // Inisialisasi DataTable dengan data statis  
+    const table = $('#userTable').DataTable({  
+    responsive: true,  
+    data: staticData,  
+    language: {  
+        info: "",  
+        infoEmpty: "",  
+        infoFiltered: "",  
+        lengthMenu: "_MENU_",   
+        search: "",  
+        searchPlaceholder: "Cari...",   
+        paginate: {  
+            first: "<i class='fas fa-angle-double-left'></i>",  
+            last: "<i class='fas fa-angle-double-right'></i>",  
+            next: "<i class='fas fa-angle-right'></i>",  
+            previous: "<i class='fas fa-angle-left'></i>"  
+        }  
+    },  
+    // Batasi jumlah halaman  
+    pageLength: 5,  
+    // Opsi pagination  
+    pagingType: 'simple_numbers',  
+    responsive: {  
+    details: {  
+        display: $.fn.dataTable.Responsive.display.modal({  
+            header: function(row) {  
+                return '<span class="header-moju">Detail Pengguna</span>';  
+            }  
+        }),  
+        renderer: $.fn.dataTable.Responsive.renderer.tableAll({  
+            tableClass: 'table table-bordered table-striped table-moju',  
+            header: function(data) {  
+                return `  
+                    <div class="detail-moju">  
+                        <span class="column-moju">${data.column}:</span>  
+                        <span class="value-moju">${data.value}</span>  
+                    </div>  
+                `;  
+            }  
+        })  
+    },  
+    breakpoints: [  
+        { name: 'desktop-moju', width: Infinity },  
+        { name: 'tablet-moju', width: 1024 },  
+        { name: 'mobile-moju', width: 768 }  
+    ]  
+} ,
+        columns: [  
+            {   
+                data: null,   
+                render: function (data, type, row, meta) {  
+                    return meta.row + 1; // Nomor urut  
+                }  
+            },  
+            { data: 'nama' },  
+            { data: 'email' },  
+            { data: 'telepon' },  
+            {   
+                data: 'status',  
+                render: function(data) {  
+                    return data === 'aktif'   
+                        ? '<span class="badge bg-success">Aktif</span>'   
+                        : '<span class="badge bg-danger">Nonaktif</span>';  
+                }  
+            },  
+            {   
+                data: null,  
+                render: function(data) {  
+                    return `  
+                        <div class="btn-group" role="group">  
+                            <button class="btn btn-sm btn-info edit-btn"   
+                                data-id="${data.id}"   
+                                data-nama="${data.nama}"   
+                                data-email="${data.email}"   
+                                data-telepon="${data.telepon}"   
+                                data-status="${data.status}">  
+                                <i class="fas fa-edit"></i>  
+                            </button>  
+                            <button class="btn btn-sm btn-danger delete-btn" data-id="${data.id}">  
+                                <i class="fas fa-trash"></i>  
+                            </button>  
+                        </div>  
+                    `;  
+                }  
+            }  
+        ]  
+    });  
+    
+            // Tambah Pengguna  
+            $('#tambahForm').on('submit', function(e) {  
+                e.preventDefault();  
+                
+                // Ambil data dari form  
+                const newUser = {  
+                    id: staticData.length + 1,  
+                    nama: $('input[name="nama"]').val(),  
+                    email: $('input[name="email"]').val(),  
+                    telepon: $('input[name="telepon"]').val(),  
+                    status: $('select[name="status"]').val()  
+                };  
+    
+                // Tambahkan ke data statis  
+                staticData.push(newUser);  
+    
+                // Reload tabel  
+                table.clear().rows.add(staticData).draw();  
+    
+                // Tutup modal  
+                $('#tambahModal').modal('hide');  
+    
+                // Reset form  
+                $('#tambahForm')[0].reset();  
+            });  
+    
+            // Edit Pengguna - Tampilkan Modal  
+            $(document).on('click', '.edit-btn', function() {  
+                const id = $(this).data('id');  
+                const nama = $(this).data('nama');  
+                const email = $(this).data('email');  
+                const telepon = $(this).data('telepon');  
+                const status = $(this).data('status');  
+    
+                $('#editId').val(id);  
+                $('#editNama').val(nama);  
+                $('#editEmail').val(email);  
+                $('#editTelepon').val(telepon);  
+                $('#editStatus').val(status);  
+    
+                $('#editModal').modal('show');  
+            });  
+    
+            // Proses Edit Pengguna  
+            $('#editForm').on('submit', function(e) {  
+                e.preventDefault();  
+                const id = $('#editId').val();  
+                
+                // Cari index user yang akan diedit  
+                const index = staticData.findIndex(user => user.id == id);  
+    
+                // Update data  
+                if (index !== -1) {  
+                    staticData[index] = {  
+                        id: id,  
+                        nama: $('#editNama').val(),  
+                        email: $('#editEmail').val(),  
+                        telepon: $('#editTelepon').val(),  
+                        status: $('#editStatus').val()  
+                    };  
+    
+                    // Reload tabel  
+                    table.clear().rows.add(staticData).draw();  
+    
+                    // Tutup modal  
+                    $('#editModal').modal('hide');  
+                }  
+            });  
+    
+            // Hapus Pengguna  
+            $(document).on('click', '.delete-btn', function() {  
+                const id = $(this).data('id');  
+                if(confirm('Apakah Anda yakin ingin menghapus pengguna ini?')) {  
+                    // Hapus dari data statis  
+                    const filteredData = staticData.filter(user => user.id != id);  
+                    
+                    // Update static data  
+                    staticData.length = 0;  
+                    staticData.push(...filteredData);  
+    
+                    // Reload tabel  
+                    table.clear().rows.add(staticData).draw();  
+                }  
+            });  
+        });  
+        </script> 
+</body>  
+</html>
